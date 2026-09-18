@@ -1,0 +1,23 @@
+---
+name: multicast-pim-accept-rp
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    borg:
+      kind: cisco_iol
+      startup-config: ./startup-configs/borg.cfg.partial
+    vulcan:
+      kind: cisco_iol
+      startup-config: ./startup-configs/vulcan.cfg.partial
+    klingon:
+      kind: cisco_iol
+      startup-config: ./startup-configs/klingon.cfg.partial
+  links:
+  - endpoints: ['borg:Ethernet0/1', 'vulcan:Ethernet0/1']
+  - endpoints: ['vulcan:Ethernet0/2', 'klingon:Ethernet0/1']
+
+...

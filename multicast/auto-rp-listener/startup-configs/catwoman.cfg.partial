@@ -1,0 +1,28 @@
+!
+hostname catwoman
+!
+!
+!
+!
+!
+!
+!
+interface Ethernet0/1
+ no shutdown
+ ip address 192.168.12.1 255.255.255.0
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+line vty 0 4
+ logging synchronous
+ exec prompt timestamp
+ exec-timeout 0 0
+ privilege level 15
+!
+end 

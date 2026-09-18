@@ -1,0 +1,202 @@
+{
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1789748833996",
+      "text": "192.168.12.0/24",
+      "position": {
+        "x": 372.5,
+        "y": 287.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789748867004",
+      "text": "192.168.13.0/24",
+      "position": {
+        "x": 507,
+        "y": 288.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789748877156",
+      "text": "192.168.24.0/24",
+      "position": {
+        "x": 374,
+        "y": 428
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789748888476",
+      "text": "192.168.34.0/24",
+      "position": {
+        "x": 506,
+        "y": 427.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789748898692",
+      "text": ".1",
+      "position": {
+        "x": 458.5,
+        "y": 184
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789748918836",
+      "text": ".2",
+      "position": {
+        "x": 281.5,
+        "y": 359.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789748927596",
+      "text": ".3",
+      "position": {
+        "x": 638,
+        "y": 358
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789748934444",
+      "text": ".4",
+      "position": {
+        "x": 462,
+        "y": 555.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    }
+  ],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "Tilburg",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 320,
+        "y": 360
+      }
+    },
+    {
+      "id": "Amsterdam",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 460,
+        "y": 220
+      }
+    },
+    {
+      "id": "Utrecht",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 460,
+        "y": 500
+      }
+    },
+    {
+      "id": "Eindhoven",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 600,
+        "y": 360
+      }
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link0",
+      "source": "Tilburg",
+      "target": "Amsterdam",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 45
+    },
+    {
+      "id": "Clab-Link2",
+      "source": "Amsterdam",
+      "target": "Eindhoven",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 45
+    },
+    {
+      "id": "Clab-Link1",
+      "source": "Tilburg",
+      "target": "Utrecht",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 45
+    },
+    {
+      "id": "Clab-Link3",
+      "source": "Utrecht",
+      "target": "Eindhoven",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 45
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

@@ -1,0 +1,131 @@
+{
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1789729499945",
+      "text": "192.168.12.0/24",
+      "position": {
+        "x": 359.5,
+        "y": 279
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789729543361",
+      "text": "192.168.23.0/24",
+      "position": {
+        "x": 363.5,
+        "y": 387.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789729563185",
+      "text": ".1",
+      "position": {
+        "x": 500.5,
+        "y": 219
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789729573504",
+      "text": ".3",
+      "position": {
+        "x": 502.5,
+        "y": 438
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789729598593",
+      "text": "Lo0: 2.2.2.2/32",
+      "position": {
+        "x": 224.5,
+        "y": 340.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    }
+  ],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "borg",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 460,
+        "y": 220
+      }
+    },
+    {
+      "id": "vulcan",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 300,
+        "y": 340
+      }
+    },
+    {
+      "id": "klingon",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 460,
+        "y": 440
+      }
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link0",
+      "source": "borg",
+      "target": "vulcan",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 40
+    },
+    {
+      "id": "Clab-Link1",
+      "source": "vulcan",
+      "target": "klingon",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 40
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

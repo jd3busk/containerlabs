@@ -1,0 +1,28 @@
+---
+name: multicast-pim-dense-mode
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    tilburg:
+      kind: cisco_iol
+      startup-config: ./startup-configs/tilburg.cfg.partial
+    amsterdam:
+      kind: cisco_iol
+      startup-config: ./startup-configs/amsterdam.cfg.partial
+    utrecht:
+      kind: cisco_iol
+      startup-config: ./startup-configs/utrecht.cfg.partial
+    eindhoven:
+      kind: cisco_iol
+      startup-config: ./startup-configs/eindhoven.cfg.partial
+  links:
+  - endpoints: ['tilburg:Ethernet0/1', 'amsterdam:Ethernet0/2']
+  - endpoints: ['tilburg:Ethernet0/2', 'utrecht:Ethernet0/1']
+  - endpoints: ['amsterdam:Ethernet0/1', 'eindhoven:Ethernet0/1']
+  - endpoints: ['utrecht:Ethernet0/2', 'eindhoven:Ethernet0/2']
+
+...

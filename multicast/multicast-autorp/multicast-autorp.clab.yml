@@ -1,0 +1,31 @@
+---
+name: multicast-autorp
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    joker:
+      kind: cisco_iol
+      startup-config: ./startup-configs/joker.cfg.partial
+    mrfreeze:
+      kind: cisco_iol
+      startup-config: ./startup-configs/mrfreeze.cfg.partial
+    catwoman:
+      kind: cisco_iol
+      startup-config: ./startup-configs/catwoman.cfg.partial
+    batman:
+      kind: cisco_iol
+      startup-config: ./startup-configs/batman.cfg.partial
+    robin:
+      kind: cisco_iol
+      startup-config: ./startup-configs/robin.cfg.partial
+  links:
+  - endpoints: ['joker:Ethernet0/1', 'catwoman:Ethernet0/1']
+  - endpoints: ['joker:Ethernet0/2', 'robin:Ethernet0/1']
+  - endpoints: ['mrfreeze:Ethernet0/1', 'robin:Ethernet0/2']
+  - endpoints: ['mrfreeze:Ethernet0/2', 'batman:Ethernet0/1']
+
+...

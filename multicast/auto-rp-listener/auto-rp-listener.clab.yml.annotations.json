@@ -1,0 +1,150 @@
+{
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1789646506668",
+      "text": "192.168.12.0/24",
+      "position": {
+        "x": 503.5,
+        "y": 458.5
+      },
+      "fontSize": 10,
+      "fontColor": "#001eff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789646544876",
+      "text": "192.168.23.0/24",
+      "position": {
+        "x": 503,
+        "y": 578
+      },
+      "fontSize": 10,
+      "fontColor": "#001eff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789646568244",
+      "text": "192.168.34.0/24",
+      "position": {
+        "x": 554,
+        "y": 654.5
+      },
+      "fontSize": 10,
+      "fontColor": "#001eff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789646582740",
+      "text": "192.168.45.0/24",
+      "position": {
+        "x": 732,
+        "y": 578
+      },
+      "fontSize": 10,
+      "fontColor": "#001eff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    }
+  ],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "joker",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 600,
+        "y": 520
+      }
+    },
+    {
+      "id": "mrfreeze",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 700,
+        "y": 640
+      }
+    },
+    {
+      "id": "catwoman",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 440,
+        "y": 400
+      }
+    },
+    {
+      "id": "batman",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 800,
+        "y": 520
+      }
+    },
+    {
+      "id": "robin",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 440,
+        "y": 640
+      }
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link0",
+      "source": "joker",
+      "target": "catwoman",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 47
+    },
+    {
+      "id": "Clab-Link1",
+      "source": "joker",
+      "target": "robin",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 51
+    },
+    {
+      "id": "Clab-Link2",
+      "source": "mrfreeze",
+      "target": "robin",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 43
+    },
+    {
+      "id": "Clab-Link3",
+      "source": "mrfreeze",
+      "target": "batman",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 35
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

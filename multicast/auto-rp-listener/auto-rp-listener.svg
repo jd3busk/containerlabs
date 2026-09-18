@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1333.9756"
+   height="949.776"
+   viewBox="0 0 1333.9756 949.776"
+   version="1.1"
+   id="svg309"
+   sodipodi:docname="auto-rp-listener.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <sodipodi:namedview
+     id="namedview311"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.23543689"
+     inkscape:cx="-65.835052"
+     inkscape:cy="467.21649"
+     inkscape:window-width="2560"
+     inkscape:window-height="1347"
+     inkscape:window-x="2560"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg309" />
+  <g
+     class="annotation-groups-layer"
+     transform="matrix(3.1575,0,0,3.1575,-1338.0888,-1263)"
+     id="g2" />
+  <g
+     class="annotation-shapes-layer"
+     transform="matrix(3.1575,0,0,3.1575,-1338.0888,-1263)"
+     id="g4" />
+  <defs
+     id="defs19">
+    <filter
+       id="text-shadow"
+       x="-0.13553341"
+       y="-0.44872919"
+       width="1.2710668"
+       height="1.8974584">
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="1.5"
+         result="blur"
+         id="feGaussianBlur6" />
+      <feFlood
+         flood-color="#3C3E41"
+         result="color"
+         id="feFlood8" />
+      <feComposite
+         in="color"
+         in2="blur"
+         operator="in"
+         result="shadow"
+         id="feComposite10" />
+      <feMerge
+         id="feMerge16">
+        <feMergeNode
+           in="shadow"
+           id="feMergeNode12" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode14" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g
+     class="export-graph-layer"
+     transform="matrix(3.1575,0,0,3.1575,-1338.0888,-1263)"
+     id="g295">
+    <g
+       class="export-edge"
+       data-id="Clab-Link0"
+       id="g35">
+      <path
+         d="M 600,525 480,435"
+         fill="none"
+         stroke="#00df2b"
+         stroke-width="4"
+         opacity="0.5"
+         id="path21" />
+      <g
+         class="edge-label"
+         id="g27">
+        <rect
+           x="534.54797"
+           y="490.79999"
+           width="55.704102"
+           height="12"
+           fill="#ffffff"
+           rx="4"
+           ry="4"
+           id="rect23" />
+        <text
+           x="562.40002"
+           y="496.79999"
+           font-size="10px"
+           font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+           dominant-baseline="central"
+           fill="#3b3b3b"
+           text-anchor="middle"
+           id="text25">Ethernet0/1</text>
+      </g>
+      <g
+         class="edge-label"
+         id="g33">
+        <rect
+           x="489.74796"
+           y="457.20001"
+           width="55.704102"
+           height="12"
+           fill="#ffffff"
+           rx="4"
+           ry="4"
+           id="rect29" />
+        <text
+           x="517.59998"
+           y="463.20001"
+           font-size="10px"
+           font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+           dominant-baseline="central"
+           fill="#3b3b3b"
+           text-anchor="middle"
+           id="text31">Ethernet0/1</text>
+      </g>
+    </g>
+    <g
+       class="export-edge"
+       data-id="Clab-Link1"
+       id="g51">
+      <path
+         d="M 600,555 480,645"
+         fill="none"
+         stroke="#00df2b"
+         stroke-width="4"
+         opacity="0.5"
+         id="path37" />
+      <g
+         class="edge-label"
+         id="g43">
+        <rect
+           x="531.34796"
+           y="579.59998"
+           width="55.704102"
+           height="12"
+           fill="#ffffff"
+           rx="4"
+           ry="4"
+           id="rect39" />
+        <text
+           x="559.20001"
+           y="585.59998"
+           font-size="10px"
+           font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+           dominant-baseline="central"
+           fill="#3b3b3b"
+           text-anchor="middle"
+           id="text41">Ethernet0/2</text>
+      </g>
+      <g
+         class="edge-label"
+         id="g49">
+        <rect
+           x="492.94794"
+           y="608.40002"
+           width="55.704102"
+           height="12"
+           fill="#ffffff"
+           rx="4"
+           ry="4"
+           id="rect45" />
+        <text
+           x="520.79999"
+           y="614.40002"
+           font-size="10px"
+           font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+           dominant-baseline="central"
+           fill="#3b3b3b"
+           text-anchor="middle"
+           id="text47">Ethernet0/1</text>
+      </g>
+    </g>
+    <g
+       class="export-edge"
+       data-id="Clab-Link2"
+       id="g67">
+      <path
+         d="M 700,660 H 480"
+         fill="none"
+         stroke="#00df2b"
+         stroke-width="4"
+         opacity="0.5"
+         id="path53" />
+      <g
+         class="edge-label"
+         id="g59">
+        <rect
+           x="629.14795"
+           y="654"
+           width="55.704102"
+           height="12"
+           fill="#ffffff"
+           rx="4"
+           ry="4"
+           id="rect55" />
+        <text
+           x="657"
+           y="660"
+           font-size="10px"
+           font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+           dominant-baseline="central"
+           fill="#3b3b3b"
+           text-anchor="middle"
+           id="text57">Ethernet0/1</text>
+      </g>
+      <g
+         class="edge-label"
+         id="g65">
+        <rect
+           x="495.14795"
+           y="654"
+           width="55.704102"
+           height="12"
+           fill="#ffffff"
+           rx="4"
+           ry="4"
+           id="rect61" />
+        <text
+           x="523"
+           y="660"
+           font-size="10px"
+           font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+           dominant-baseline="central"
+           fill="#3b3b3b"
+           text-anchor="middle"
+           id="text63">Ethernet0/2</text>
+      </g>
+    </g>
+    <g
+       class="export-edge"
+       data-id="Clab-Link3"
+       id="g83">
+      <path
+         d="m 736.66667,640 66.66666,-80"
+         fill="none"
+         stroke="#00df2b"
+         stroke-width="4"
+         opacity="0.5"
+         id="path69" />
+      <g
+         class="edge-label"
+         id="g75">
+        <rect
+           x="731.22107"
+           y="607.11224"
+           width="55.704102"
+           height="12"
+           fill="#ffffff"
+           rx="4"
+           ry="4"
+           id="rect71" />
+        <text
+           x="759.07312"
+           y="613.11224"
+           font-size="10px"
+           font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+           dominant-baseline="central"
+           fill="#3b3b3b"
+           text-anchor="middle"
+           id="text73">Ethernet0/2</text>
+      </g>
+      <g
+         class="edge-label"
+         id="g81">
+        <rect
+           x="753.07483"
+           y="580.88776"
+           width="55.704102"
+           height="12"
+           fill="#ffffff"
+           rx="4"
+           ry="4"
+           id="rect77" />
+        <text
+           x="780.92688"
+           y="586.88776"
+           font-size="10px"
+           font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+           dominant-baseline="central"
+           fill="#3b3b3b"
+           text-anchor="middle"
+           id="text79">Ethernet0/1</text>
+      </g>
+    </g>
+    <g
+       class="export-node topology-node"
+       data-id="joker"
+       id="g125">
+      <g
+         id="g119">
+        <rect
+           x="600"
+           y="520"
+           width="40"
+           height="40"
+           rx="4"
+           ry="4"
+           fill="#005aff"
+           id="rect85" />
+        <g
+           transform="translate(600,520)"
+           style="color:#005aff"
+           id="g117">
+          <g
+             transform="scale(0.3333)"
+             id="g115">
+            <rect
+               height="120"
+               width="120"
+               fill="currentColor"
+               id="rect87"
+               x="0"
+               y="0" />
+            <g
+               id="g113">
+              <g
+                 id="g93">
+                <path
+                   d="M 71.7,19.7 V 48 h 28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path89" />
+                <path
+                   d="m 91.2,38.5 7.5,7.6 c 1.3,1.3 1.3,3.1 0,4.3 L 91.1,58"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path91" />
+              </g>
+              <g
+                 id="g99">
+                <path
+                   d="m 20,47.8 h 28.4 v -28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path95" />
+                <path
+                   d="m 38.8,28.3 7.6,-7.5 c 1.3,-1.3 3.1,-1.3 4.3,0 l 7.7,7.6"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path97" />
+              </g>
+              <g
+                 id="g105">
+                <path
+                   d="M 48,100.3 V 72 H 20"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path101" />
+                <path
+                   d="M 28.5,81.5 21,73.9 c -1.3,-1.3 -1.3,-3.1 0,-4.3 l 7.6,-7.7"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path103" />
+              </g>
+              <g
+                 id="g111">
+                <path
+                   d="M 100,71.9 H 71.6 v 28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path107" />
+                <path
+                   d="m 81.2,91.4 -7.6,7.5 c -1.3,1.3 -3.1,1.3 -4.3,0 l -7.7,-7.6"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path109" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect
+         x="603.87567"
+         y="562"
+         width="32.248688"
+         height="18.799999"
+         fill="rgba(0, 0, 0, 0.7)"
+         rx="3"
+         ry="3"
+         id="rect121" />
+      <text
+         x="620"
+         y="571.40002"
+         font-size="11.2px"
+         font-weight="500"
+         font-family="Roboto, sans-serif"
+         dominant-baseline="central"
+         fill="#f5f5f5"
+         text-anchor="middle"
+         filter="url(#text-shadow)"
+         id="text123">joker</text>
+    </g>
+    <g
+       class="export-node topology-node"
+       data-id="mrfreeze"
+       id="g167">
+      <g
+         id="g161">
+        <rect
+           x="700"
+           y="640"
+           width="40"
+           height="40"
+           rx="4"
+           ry="4"
+           fill="#005aff"
+           id="rect127" />
+        <g
+           transform="translate(700,640)"
+           style="color:#005aff"
+           id="g159">
+          <g
+             transform="scale(0.3333)"
+             id="g157">
+            <rect
+               height="120"
+               width="120"
+               fill="currentColor"
+               id="rect129"
+               x="0"
+               y="0" />
+            <g
+               id="g155">
+              <g
+                 id="g135">
+                <path
+                   d="M 71.7,19.7 V 48 h 28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path131" />
+                <path
+                   d="m 91.2,38.5 7.5,7.6 c 1.3,1.3 1.3,3.1 0,4.3 L 91.1,58"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path133" />
+              </g>
+              <g
+                 id="g141">
+                <path
+                   d="m 20,47.8 h 28.4 v -28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path137" />
+                <path
+                   d="m 38.8,28.3 7.6,-7.5 c 1.3,-1.3 3.1,-1.3 4.3,0 l 7.7,7.6"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path139" />
+              </g>
+              <g
+                 id="g147">
+                <path
+                   d="M 48,100.3 V 72 H 20"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path143" />
+                <path
+                   d="M 28.5,81.5 21,73.9 c -1.3,-1.3 -1.3,-3.1 0,-4.3 l 7.6,-7.7"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path145" />
+              </g>
+              <g
+                 id="g153">
+                <path
+                   d="M 100,71.9 H 71.6 v 28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path149" />
+                <path
+                   d="m 81.2,91.4 -7.6,7.5 c -1.3,1.3 -3.1,1.3 -4.3,0 l -7.7,-7.6"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path151" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect
+         x="693.93091"
+         y="682"
+         width="52.138184"
+         height="18.799999"
+         fill="rgba(0, 0, 0, 0.7)"
+         rx="3"
+         ry="3"
+         id="rect163" />
+      <text
+         x="720"
+         y="691.40002"
+         font-size="11.2px"
+         font-weight="500"
+         font-family="Roboto, sans-serif"
+         dominant-baseline="central"
+         fill="#f5f5f5"
+         text-anchor="middle"
+         filter="url(#text-shadow)"
+         id="text165">mrfreeze</text>
+    </g>
+    <g
+       class="export-node topology-node"
+       data-id="catwoman"
+       id="g209">
+      <g
+         id="g203">
+        <rect
+           x="440"
+           y="400"
+           width="40"
+           height="40"
+           rx="4"
+           ry="4"
+           fill="#005aff"
+           id="rect169" />
+        <g
+           transform="translate(440,400)"
+           style="color:#005aff"
+           id="g201">
+          <g
+             transform="scale(0.3333)"
+             id="g199">
+            <rect
+               height="120"
+               width="120"
+               fill="currentColor"
+               id="rect171"
+               x="0"
+               y="0" />
+            <g
+               id="g197">
+              <g
+                 id="g177">
+                <path
+                   d="M 71.7,19.7 V 48 h 28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path173" />
+                <path
+                   d="m 91.2,38.5 7.5,7.6 c 1.3,1.3 1.3,3.1 0,4.3 L 91.1,58"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path175" />
+              </g>
+              <g
+                 id="g183">
+                <path
+                   d="m 20,47.8 h 28.4 v -28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path179" />
+                <path
+                   d="m 38.8,28.3 7.6,-7.5 c 1.3,-1.3 3.1,-1.3 4.3,0 l 7.7,7.6"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path181" />
+              </g>
+              <g
+                 id="g189">
+                <path
+                   d="M 48,100.3 V 72 H 20"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path185" />
+                <path
+                   d="M 28.5,81.5 21,73.9 c -1.3,-1.3 -1.3,-3.1 0,-4.3 l 7.6,-7.7"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path187" />
+              </g>
+              <g
+                 id="g195">
+                <path
+                   d="M 100,71.9 H 71.6 v 28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path191" />
+                <path
+                   d="m 81.2,91.4 -7.6,7.5 c -1.3,1.3 -3.1,1.3 -4.3,0 l -7.7,-7.6"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path193" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect
+         x="430.50583"
+         y="442"
+         width="58.988342"
+         height="18.799999"
+         fill="rgba(0, 0, 0, 0.7)"
+         rx="3"
+         ry="3"
+         id="rect205" />
+      <text
+         x="460"
+         y="451.39999"
+         font-size="11.2px"
+         font-weight="500"
+         font-family="Roboto, sans-serif"
+         dominant-baseline="central"
+         fill="#f5f5f5"
+         text-anchor="middle"
+         filter="url(#text-shadow)"
+         id="text207">catwoman</text>
+    </g>
+    <g
+       class="export-node topology-node"
+       data-id="batman"
+       id="g251">
+      <g
+         id="g245">
+        <rect
+           x="800"
+           y="520"
+           width="40"
+           height="40"
+           rx="4"
+           ry="4"
+           fill="#005aff"
+           id="rect211" />
+        <g
+           transform="translate(800,520)"
+           style="color:#005aff"
+           id="g243">
+          <g
+             transform="scale(0.3333)"
+             id="g241">
+            <rect
+               height="120"
+               width="120"
+               fill="currentColor"
+               id="rect213"
+               x="0"
+               y="0" />
+            <g
+               id="g239">
+              <g
+                 id="g219">
+                <path
+                   d="M 71.7,19.7 V 48 h 28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path215" />
+                <path
+                   d="m 91.2,38.5 7.5,7.6 c 1.3,1.3 1.3,3.1 0,4.3 L 91.1,58"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path217" />
+              </g>
+              <g
+                 id="g225">
+                <path
+                   d="m 20,47.8 h 28.4 v -28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path221" />
+                <path
+                   d="m 38.8,28.3 7.6,-7.5 c 1.3,-1.3 3.1,-1.3 4.3,0 l 7.7,7.6"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path223" />
+              </g>
+              <g
+                 id="g231">
+                <path
+                   d="M 48,100.3 V 72 H 20"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path227" />
+                <path
+                   d="M 28.5,81.5 21,73.9 c -1.3,-1.3 -1.3,-3.1 0,-4.3 l 7.6,-7.7"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path229" />
+              </g>
+              <g
+                 id="g237">
+                <path
+                   d="M 100,71.9 H 71.6 v 28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path233" />
+                <path
+                   d="m 81.2,91.4 -7.6,7.5 c -1.3,1.3 -3.1,1.3 -4.3,0 l -7.7,-7.6"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path235" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect
+         x="797.34235"
+         y="562"
+         width="45.315338"
+         height="18.799999"
+         fill="rgba(0, 0, 0, 0.7)"
+         rx="3"
+         ry="3"
+         id="rect247" />
+      <text
+         x="820"
+         y="571.40002"
+         font-size="11.2px"
+         font-weight="500"
+         font-family="Roboto, sans-serif"
+         dominant-baseline="central"
+         fill="#f5f5f5"
+         text-anchor="middle"
+         filter="url(#text-shadow)"
+         id="text249">batman</text>
+    </g>
+    <g
+       class="export-node topology-node"
+       data-id="robin"
+       id="g293">
+      <g
+         id="g287">
+        <rect
+           x="440"
+           y="640"
+           width="40"
+           height="40"
+           rx="4"
+           ry="4"
+           fill="#005aff"
+           id="rect253" />
+        <g
+           transform="translate(440,640)"
+           style="color:#005aff"
+           id="g285">
+          <g
+             transform="scale(0.3333)"
+             id="g283">
+            <rect
+               height="120"
+               width="120"
+               fill="currentColor"
+               id="rect255"
+               x="0"
+               y="0" />
+            <g
+               id="g281">
+              <g
+                 id="g261">
+                <path
+                   d="M 71.7,19.7 V 48 h 28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path257" />
+                <path
+                   d="m 91.2,38.5 7.5,7.6 c 1.3,1.3 1.3,3.1 0,4.3 L 91.1,58"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path259" />
+              </g>
+              <g
+                 id="g267">
+                <path
+                   d="m 20,47.8 h 28.4 v -28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path263" />
+                <path
+                   d="m 38.8,28.3 7.6,-7.5 c 1.3,-1.3 3.1,-1.3 4.3,0 l 7.7,7.6"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path265" />
+              </g>
+              <g
+                 id="g273">
+                <path
+                   d="M 48,100.3 V 72 H 20"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path269" />
+                <path
+                   d="M 28.5,81.5 21,73.9 c -1.3,-1.3 -1.3,-3.1 0,-4.3 l 7.6,-7.7"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path271" />
+              </g>
+              <g
+                 id="g279">
+                <path
+                   d="M 100,71.9 H 71.6 v 28"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path275" />
+                <path
+                   d="m 81.2,91.4 -7.6,7.5 c -1.3,1.3 -3.1,1.3 -4.3,0 l -7.7,-7.6"
+                   fill="none"
+                   stroke="#ffffff"
+                   stroke-width="4"
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   id="path277" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect
+         x="443.56155"
+         y="682"
+         width="32.876892"
+         height="18.799999"
+         fill="rgba(0, 0, 0, 0.7)"
+         rx="3"
+         ry="3"
+         id="rect289" />
+      <text
+         x="460"
+         y="691.40002"
+         font-size="11.2px"
+         font-weight="500"
+         font-family="Roboto, sans-serif"
+         dominant-baseline="central"
+         fill="#f5f5f5"
+         text-anchor="middle"
+         filter="url(#text-shadow)"
+         id="text291">robin</text>
+    </g>
+  </g>
+  <g
+     class="annotation-shapes-layer"
+     transform="matrix(3.1575,0,0,3.1575,-1338.0888,-1263)"
+     id="g297" />
+  <g
+     class="annotation-text-layer"
+     transform="matrix(3.1575,0,0,3.1575,-1338.0888,-1263)"
+     id="g307">
+    <g
+       class="annotation-text"
+       data-id="freeText_1789646506668"
+       id="g299">
+      <foreignObject
+         x="503.5"
+         y="458.5"
+         width="98.75000000000001"
+         height="43">
+        <xhtml:div
+           class="export-free-text export-free-text--auto"
+           style="width: 100%; height: 100%; overflow: hidden; font-size: 10px; line-height: 1.5; color: #001eff; font-weight: bold; font-style: normal; text-decoration: none; text-align: left; font-family: Arial; background-color: transparent; box-sizing: border-box; padding: 4px;">
+          <xhtml:p>192.168.12.0/24</xhtml:p>
+        </xhtml:div>
+      </foreignObject>
+    </g>
+    <g
+       class="annotation-text"
+       data-id="freeText_1789646544876"
+       id="g301">
+      <foreignObject
+         x="503"
+         y="578"
+         width="98.75000000000001"
+         height="43">
+        <xhtml:div
+           class="export-free-text export-free-text--auto"
+           style="width: 100%; height: 100%; overflow: hidden; font-size: 10px; line-height: 1.5; color: #001eff; font-weight: bold; font-style: normal; text-decoration: none; text-align: left; font-family: Arial; background-color: transparent; box-sizing: border-box; padding: 4px;">
+          <xhtml:p>192.168.23.0/24</xhtml:p>
+        </xhtml:div>
+      </foreignObject>
+    </g>
+    <g
+       class="annotation-text"
+       data-id="freeText_1789646568244"
+       id="g303">
+      <foreignObject
+         x="554"
+         y="654.5"
+         width="98.75000000000001"
+         height="43">
+        <xhtml:div
+           class="export-free-text export-free-text--auto"
+           style="width: 100%; height: 100%; overflow: hidden; font-size: 10px; line-height: 1.5; color: #001eff; font-weight: bold; font-style: normal; text-decoration: none; text-align: left; font-family: Arial; background-color: transparent; box-sizing: border-box; padding: 4px;">
+          <xhtml:p>192.168.34.0/24</xhtml:p>
+        </xhtml:div>
+      </foreignObject>
+    </g>
+    <g
+       class="annotation-text"
+       data-id="freeText_1789646582740"
+       id="g305">
+      <foreignObject
+         x="732"
+         y="578"
+         width="98.75000000000001"
+         height="43">
+        <xhtml:div
+           class="export-free-text export-free-text--auto"
+           style="width: 100%; height: 100%; overflow: hidden; font-size: 10px; line-height: 1.5; color: #001eff; font-weight: bold; font-style: normal; text-decoration: none; text-align: left; font-family: Arial; background-color: transparent; box-sizing: border-box; padding: 4px;">
+          <xhtml:p>192.168.45.0/24</xhtml:p>
+        </xhtml:div>
+      </foreignObject>
+    </g>
+  </g>
+</svg>

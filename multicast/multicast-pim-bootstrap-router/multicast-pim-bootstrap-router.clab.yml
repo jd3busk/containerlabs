@@ -1,0 +1,27 @@
+---
+name: multicast-pim-bootstrap-router
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    catwoman:
+      kind: cisco_iol
+      startup-config: ./startup-configs/catwoman.cfg.partial
+    joker:
+      kind: cisco_iol
+      startup-config: ./startup-configs/joker.cfg.partial
+    robin:
+      kind: cisco_iol
+      startup-config: ./startup-configs/robin.cfg.partial
+    batman:
+      kind: cisco_iol
+      startup-config: ./startup-configs/batman.cfg.partial
+  links:
+  - endpoints: ['catwoman:Ethernet0/1', 'joker:Ethernet0/1']
+  - endpoints: ['joker:Ethernet0/2', 'robin:Ethernet0/1']
+  - endpoints: ['robin:Ethernet0/2', 'batman:Ethernet0/1']
+
+...

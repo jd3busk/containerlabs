@@ -1,0 +1,178 @@
+{
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1789746992461",
+      "text": "192.168.12.0/24",
+      "position": {
+        "x": 323,
+        "y": 198
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789747027196",
+      "text": "192.168.23.0/24",
+      "position": {
+        "x": 319,
+        "y": 308
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789747071237",
+      "text": "192.168.34.0/24",
+      "position": {
+        "x": 324.5,
+        "y": 418.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789747086557",
+      "text": ".1",
+      "position": {
+        "x": 227.5,
+        "y": 139
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789747103389",
+      "text": ".2",
+      "position": {
+        "x": 466.5,
+        "y": 258
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789747113621",
+      "text": ".3",
+      "position": {
+        "x": 231.5,
+        "y": 359
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789747122149",
+      "text": ".4",
+      "position": {
+        "x": 468,
+        "y": 479.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    }
+  ],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "catwoman",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 260,
+        "y": 140
+      }
+    },
+    {
+      "id": "joker",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 420,
+        "y": 260
+      }
+    },
+    {
+      "id": "robin",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 260,
+        "y": 360
+      }
+    },
+    {
+      "id": "batman",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 420,
+        "y": 480
+      }
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link0",
+      "source": "catwoman",
+      "target": "joker",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 45
+    },
+    {
+      "id": "Clab-Link1",
+      "source": "joker",
+      "target": "robin",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 42
+    },
+    {
+      "id": "Clab-Link2",
+      "source": "robin",
+      "target": "batman",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 45
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}
