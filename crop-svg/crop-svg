@@ -1,0 +1,228 @@
+#!/usr/bin/env python3
+"""crop-svg: convert TopoViewer annotations and crop SVG whitespace with Inkscape.
+
+Requires Python 3.9+ and Inkscape 1.x. No pip packages are needed.
+
+  crop-svg topology.svg
+  crop-svg topology.svg -o topology-cropped.svg --margin 20
+
+The input is never overwritten. The default output is <stem>-cropped.svg.
+Margin is measured in the exported SVG's coordinate units (normally pixels).
+Use --force to replace an EXISTING OUTPUT file, never the input.
+
+Supported: TopoViewer plain text annotations, paragraphs, explicit line breaks,
+font family/size/weight/style, color, alignment, underline, and strikethrough.
+Nested rich-text formatting is flattened to the outer annotation style, with a
+warning. This is not a general HTML-to-SVG converter. Missing annotations cannot
+be recovered. Simple left-side annotations whose boxes overlap an unrotated
+router icon are aligned just to its left. Other pre-existing overlaps may need
+adjustment. Large background shapes count toward the cropped area.
+"""
+import argparse
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import xml.etree.ElementTree as ET
+
+SVG = 'http://www.w3.org/2000/svg'
+HTML = 'http://www.w3.org/1999/xhtml'
+ET.register_namespace('', SVG)
+ET.register_namespace('xlink', 'http://www.w3.org/1999/xlink')
+
+
+def tag(element):
+    return element.tag.rsplit('}', 1)[-1] if isinstance(element.tag, str) else ''
+
+
+def number(value):
+    """Accept unitless or px values; reject units that need a CSS layout engine."""
+    if not re.fullmatch(r'[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:px)?', value.strip()):
+        raise ValueError(f'Unsupported length: {value!r}')
+    return float(value.strip().removesuffix('px'))
+
+
+def style_map(element):
+    return dict((k.strip(), v.strip()) for k, v in
+                (part.split(':', 1) for part in element.get('style', '').split(';') if ':' in part))
+
+
+def get_lines(div):
+    # Preserve explicit breaks and paragraph boundaries; collapse normal HTML whitespace.
+    chunks = []
+    allowed = {'div', 'p', 'br', 'span', 'b', 'strong', 'i', 'em', 'u', 's'}
+    def visit(e):
+        name = tag(e)
+        if name not in allowed:
+            raise ValueError(f'Unsupported HTML annotation element <{name}>')
+        if name == 'br':
+            chunks.append('\n')
+        if e.text:
+            chunks.append(re.sub(r'\s+', ' ', e.text))
+        for child in e:
+            visit(child)
+            if child.tail:
+                chunks.append(re.sub(r'\s+', ' ', child.tail))
+        if name in {'p', 'div'}:
+            chunks.append('\n')
+    visit(div)
+    return [line.strip() for line in ''.join(chunks).strip().split('\n')]
+
+
+def convert(tree):
+    count = 0
+    root = tree.getroot()
+    parents = {child: parent for parent in root.iter() for child in parent}
+    for foreign in list(root.iter(f'{{{SVG}}}foreignObject')):
+        parent = parents[foreign]
+        if 'annotation-text' not in parent.get('class', '').split():
+            raise ValueError('Found a foreignObject outside a TopoViewer text annotation; refusing to discard it.')
+        div = next((e for e in foreign if tag(e) == 'div'), None)
+        if div is None:
+            raise ValueError('Text annotation contains no HTML div.')
+        css = style_map(div)
+        for e in div.iter():
+            if e is not div and (e.get('style') or tag(e) in {'strong', 'b', 'em', 'i', 'u', 's'}):
+                print('Warning: nested rich-text styling is flattened to the annotation style.', file=sys.stderr)
+                break
+        background = css.get('background-color', 'transparent')
+        if background not in ('transparent', 'rgba(0, 0, 0, 0)'):
+            raise ValueError('Colored HTML annotation backgrounds are not supported by this script.')
+        size = number(css.get('font-size', '10px'))
+        padding = number(css.get('padding', '4px'))
+        height = css.get('line-height', '1.5')
+        line_height = number(height) if height.endswith('px') else number(height) * size
+        x, y = number(foreign.get('x', '0')), number(foreign.get('y', '0'))
+        width = number(foreign.get('width', '100'))
+        align = css.get('text-align', 'left')
+        anchor = {'left': 'start', 'center': 'middle', 'right': 'end'}.get(align, 'start')
+        tx = x + padding if anchor == 'start' else x + width / 2 if anchor == 'middle' else x + width - padding
+        # HTML <p> defaults to a 1em top margin. Approximate the font's alphabetic baseline.
+        has_paragraph = any(tag(e) == 'p' for e in div)
+        top_margin = size if has_paragraph else 0
+        baseline = y + padding + top_margin + (line_height - size) / 2 + size * .85
+        # TopoViewer graph and annotation layers share the same coordinate transform.
+        # Keep a left-side label clear of a router icon, as in the example lab.
+        layer = parents.get(parent)
+        for graph in root:
+            if 'export-graph-layer' not in graph.get('class', '').split():
+                continue
+            if layer is None or graph.get('transform', '') != layer.get('transform', ''):
+                continue
+            for node in graph:
+                if 'export-node' not in node.get('class', '').split():
+                    continue
+                # Skip rotated/scaled node wrappers; this check is intentionally narrow.
+                wrappers = [e for e in node.iter() if e is not node and e.get('transform')]
+                if not wrappers or not re.match(r'rotate\(0(?:[ ,]|\))', wrappers[0].get('transform', '')):
+                    continue
+                icon = next(node.iter(f'{{{SVG}}}rect'), None)
+                if icon is None:
+                    continue
+                nx, ny = number(icon.get('x', '0')), number(icon.get('y', '0'))
+                nh = number(icon.get('height', '0'))
+                if anchor == 'start' and x < nx < x + width and ny <= baseline <= ny + nh:
+                    tx, anchor = nx - 6, 'end'
+                    break
+        attrs = {
+            'x': str(tx), 'y': str(baseline),
+            'font-family': css.get('font-family', 'Arial, sans-serif'),
+            'font-size': str(size), 'font-weight': css.get('font-weight', 'normal'),
+            'font-style': css.get('font-style', 'normal'),
+            'fill': css.get('color', '#000000'), 'text-anchor': anchor,
+        }
+        if css.get('text-decoration', 'none') != 'none':
+            attrs['text-decoration'] = css['text-decoration']
+        if foreign.get('transform'):
+            attrs['transform'] = foreign.get('transform')
+        native = ET.Element(f'{{{SVG}}}text', attrs)
+        lines = get_lines(div)
+        if len(lines) == 1:
+            native.text = lines[0]
+        else:
+            for index, line in enumerate(lines):
+                span = ET.SubElement(native, f'{{{SVG}}}tspan', {
+                    'x': str(tx), 'y': str(baseline + index * line_height)})
+                span.text = line
+        native.tail = foreign.tail
+        index = list(parent).index(foreign)
+        parent.remove(foreign)
+        parent.insert(index, native)
+        count += 1
+    # Browser-generated HTML head elements have no place in a standalone SVG.
+    for parent in root.iter():
+        for child in list(parent):
+            if child.tag == f'{{{HTML}}}head':
+                parent.remove(child)
+    return count
+
+
+def inkscape_path(explicit):
+    candidates = [explicit] if explicit else [
+        shutil.which('inkscape'), '/Applications/Inkscape.app/Contents/MacOS/inkscape',
+        str(Path.home() / 'Applications/Inkscape.app/Contents/MacOS/inkscape'),
+        '/Applications/Inkscape.app/Contents/Resources/bin/inkscape',
+    ]
+    for candidate in candidates:
+        if candidate and Path(candidate).is_file():
+            return str(candidate)
+    raise ValueError('Inkscape was not found. Install it or pass --inkscape /path/to/inkscape.')
+
+
+def main():
+    parser = argparse.ArgumentParser(prog='crop-svg', description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('input', type=Path)
+    parser.add_argument('-o', '--output', type=Path)
+    parser.add_argument('--margin', type=float, default=20, help='Margin around the cropped drawing (default: 20 SVG units).')
+    parser.add_argument('--inkscape', help='Path to the Inkscape executable.')
+    parser.add_argument('--force', action='store_true', help='Replace an existing output file.')
+    args = parser.parse_args()
+    source = args.input.expanduser().resolve()
+    output = (args.output or source.with_name(source.stem + '-cropped.svg')).expanduser().resolve()
+    if source == output:
+        parser.error('Choose a separate output path; the original is preserved.')
+    if output.exists() and not args.force:
+        parser.error(f'Output already exists: {output}. Use --force to replace it.')
+    if not 0 <= args.margin < float('inf'):
+        parser.error('--margin must be a finite nonnegative number.')
+    try:
+        executable = inkscape_path(args.inkscape)
+        raw = source.read_bytes()
+        if b'<!DOCTYPE' in raw.upper() or b'<!ENTITY' in raw.upper():
+            raise ValueError('SVG files containing DTD/entity declarations are not supported.')
+        tree = ET.ElementTree(ET.fromstring(raw))
+        if tree.getroot().tag != f'{{{SVG}}}svg':
+            raise ValueError('The input is not an SVG document.')
+        converted = convert(tree)
+        output.parent.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(prefix='crop-svg-', dir=output.parent) as directory:
+            draft = Path(directory) / 'native.svg'
+            cropped = Path(directory) / 'cropped.svg'
+            tree.write(draft, encoding='utf-8', xml_declaration=True)
+            result = subprocess.run([
+                executable, str(draft), '--export-area-drawing', '--export-type=svg',
+                '--export-plain-svg', f'--export-filename={cropped}',
+            ], capture_output=True, text=True, timeout=120)
+            if result.returncode or not cropped.exists():
+                raise ValueError('Inkscape export failed:\n' + result.stderr)
+            final = ET.parse(cropped)
+            root = final.getroot()
+            x, y, w, h = map(float, re.split(r'[\s,]+', root.attrib['viewBox'].strip()))
+            margin = args.margin
+            root.set('viewBox', f'{x-margin:g} {y-margin:g} {w+2*margin:g} {h+2*margin:g}')
+            root.set('width', f'{w+2*margin:g}')
+            root.set('height', f'{h+2*margin:g}')
+            final.write(cropped, encoding='utf-8', xml_declaration=True)
+            os.replace(cropped, output)
+        print(f'Converted {converted} annotation(s); cropped with {args.margin:g} units of margin.\nSaved: {output}')
+    except (OSError, ValueError, KeyError, ET.ParseError, subprocess.TimeoutExpired) as error:
+        print(f'Error: {error}', file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())
