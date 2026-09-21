@@ -1,0 +1,30 @@
+name: multicast-pim-dr-election
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    picard:
+      kind: cisco_iol
+      startup-config: ./startup-configs/picard.cfg.partial
+    spock:
+      kind: cisco_iol
+      startup-config: ./startup-configs/spock.cfg.partial
+    kirk:
+      kind: cisco_iol
+      startup-config: ./startup-configs/kirk.cfg.partial
+    scotty:
+      kind: cisco_iol
+      startup-config: ./startup-configs/scotty.cfg.partial
+    sw1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol_l2:latest
+      type: l2
+  links:
+  - endpoints: ['picard:Ethernet0/1', 'spock:Ethernet0/1']
+  - endpoints: ['picard:Ethernet0/2', 'kirk:Ethernet0/1']
+  - endpoints: ['spock:Ethernet0/2', 'sw1:Ethernet0/1']
+  - endpoints: ['kirk:Ethernet0/2', 'sw1:Ethernet0/2']
+  - endpoints: ['scotty:Ethernet0/1', 'sw1:Ethernet0/3']

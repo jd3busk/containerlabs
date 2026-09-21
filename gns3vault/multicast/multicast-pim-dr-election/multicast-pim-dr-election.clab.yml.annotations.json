@@ -1,0 +1,144 @@
+{
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1789994649116",
+      "text": "192.168.12.0/24",
+      "position": {
+        "x": 195.264271971727,
+        "y": 227.32052318452233
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789994696363",
+      "text": "192.168.13.0/24",
+      "position": {
+        "x": 371.2069051934483,
+        "y": 228.6791049603166
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1789994712106",
+      "text": "192.168.234.0/24",
+      "position": {
+        "x": 278.9999070362098,
+        "y": 270.188433680554
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    }
+  ],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "picard",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 300,
+        "y": 160
+      }
+    },
+    {
+      "id": "spock",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 120,
+        "y": 300
+      }
+    },
+    {
+      "id": "kirk",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 480,
+        "y": 300
+      }
+    },
+    {
+      "id": "scotty",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 300,
+        "y": 440
+      }
+    },
+    {
+      "id": "sw1",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 300,
+        "y": 300
+      }
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link0",
+      "source": "picard",
+      "target": "spock",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 55
+    },
+    {
+      "id": "Clab-Link1",
+      "source": "picard",
+      "target": "kirk",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 50
+    },
+    {
+      "id": "Clab-Link2",
+      "source": "spock",
+      "target": "sw1",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 40
+    },
+    {
+      "id": "Clab-Link3",
+      "source": "kirk",
+      "target": "sw1",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 40
+    },
+    {
+      "id": "Clab-Link4",
+      "source": "scotty",
+      "target": "sw1",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/3",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 40
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}
