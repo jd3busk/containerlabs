@@ -27,5 +27,4 @@ topology:
   - endpoints: ['joker:Ethernet0/2', 'robin:Ethernet0/1']
   - endpoints: ['mrfreeze:Ethernet0/1', 'robin:Ethernet0/2']
   - endpoints: ['mrfreeze:Ethernet0/2', 'batman:Ethernet0/1']
-
 ...

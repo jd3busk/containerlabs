@@ -16,7 +16,7 @@ You are a network engineer and responsible for the main network of Gotham City. 
 
 ## Topology
 
-<img src="./multicast-autorp.svg" style="max-width: 700px; width: 100%; height: auto;">
+<img src="./topology.svg" style="max-width: 700px; width: 100%; height: auto;">
 
 ## Video Solution
 

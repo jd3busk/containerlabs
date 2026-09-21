@@ -14,7 +14,7 @@ You are working for a big Dutch company specialized in delivering Video-over-IP 
 
 ## Topology
 
-<img src="./multicast-pim-dense-mode.svg" style="max-height: 700px; height: 100%; width: auto;">
+<img src="./topology.svg" style="max-height: 700px; height: 100%; width: auto;">
 
 ## Video Solution
 

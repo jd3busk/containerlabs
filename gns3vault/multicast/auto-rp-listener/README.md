@@ -17,7 +17,7 @@ Gotham City once again needs your help, one of your colleagues decided to change
 
 ## Topology
 
-<img src="./auto-rp-listener.svg" style="max-width: 700px; width: 100%; height: auto;">
+<img src="./topology.svg" style="max-width: 700px; width: 100%; height: auto;">
 
 ## Video Solution
 

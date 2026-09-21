@@ -17,7 +17,7 @@ Your have been streaming Star Trek videos by using multicast on your corporate n
 
 ## Topology
 
-<img src="./multicast-pim-dr-election.svg" style="max-width: 700px; width: 100%; height: auto;">
+<img src="./topology.svg" style="max-width: 700px; width: 100%; height: auto;">
 
 ## Video Solution
 

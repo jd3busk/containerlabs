@@ -19,7 +19,7 @@ Since you are a excellent network engineer at the company you are working for, t
 
 ## Topology
 
-<img src="./multicast-pim-accept-rp.svg" style="max-height: 500px; width: auto; height: 100%;">
+<img src="./topology.svg" style="max-height: 500px; width: auto; height: 100%;">
 
 ## Video Solution
 
