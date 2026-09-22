@@ -1,0 +1,24 @@
+name: multicast-pim-sparse-dense-mode
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    drill:
+      kind: cisco_iol
+      startup-config: ./startup-configs/drill.cfg.partial
+    orangutan:
+      kind: cisco_iol
+      startup-config: ./startup-configs/orangutan.cfg.partial
+    chimpanzee:
+      kind: cisco_iol
+      startup-config: ./startup-configs/chimpanzee.cfg.partial
+    gibbon:
+      kind: cisco_iol
+      startup-config: ./startup-configs/gibbon.cfg.partial
+  links:
+  - endpoints: ['drill:Ethernet0/1', 'gibbon:Ethernet0/2']
+  - endpoints: ['orangutan:Ethernet0/1', 'chimpanzee:Ethernet0/1']
+  - endpoints: ['chimpanzee:Ethernet0/2', 'gibbon:Ethernet0/1']

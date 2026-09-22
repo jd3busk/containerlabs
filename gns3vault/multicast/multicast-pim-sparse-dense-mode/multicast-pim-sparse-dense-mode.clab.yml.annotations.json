@@ -1,0 +1,178 @@
+{
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1790103720042",
+      "text": "192.168.12.0/24",
+      "position": {
+        "x": 366,
+        "y": 189.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790103753705",
+      "text": "192.168.23.0/24",
+      "position": {
+        "x": 363.5,
+        "y": 287
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790103771561",
+      "text": "192.168.34.0/24",
+      "position": {
+        "x": 361.5,
+        "y": 398.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790103813113",
+      "text": ".1",
+      "position": {
+        "x": 251.5,
+        "y": 138
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790103824129",
+      "text": ".3",
+      "position": {
+        "x": 251,
+        "y": 342.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790103836537",
+      "text": ".2",
+      "position": {
+        "x": 526.5,
+        "y": 235.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790103845985",
+      "text": ".4",
+      "position": {
+        "x": 526.5,
+        "y": 458
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    }
+  ],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "drill",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 480,
+        "y": 460
+      }
+    },
+    {
+      "id": "orangutan",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 280,
+        "y": 140
+      }
+    },
+    {
+      "id": "chimpanzee",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 480,
+        "y": 240
+      }
+    },
+    {
+      "id": "gibbon",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 280,
+        "y": 340
+      }
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link1",
+      "source": "orangutan",
+      "target": "chimpanzee",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 50
+    },
+    {
+      "id": "Clab-Link2",
+      "source": "chimpanzee",
+      "target": "gibbon",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 50
+    },
+    {
+      "id": "Clab-Link0",
+      "source": "drill",
+      "target": "gibbon",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 50
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}
