@@ -1,0 +1,44 @@
+!
+hostname arlene
+!
+!         
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Ethernet0/1
+ no shutdown
+ ip address 10.0.0.3 255.255.255.0
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line vty 0 4
+ exec-timeout 0 0
+ logging synchronous
+ exec prompt timestamp
+!
+end

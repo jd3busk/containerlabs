@@ -1,0 +1,35 @@
+---
+name: multicast-pim-nbma-mode
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    pooky:
+      kind: cisco_iol
+      startup-config: ./startup-configs/pooky.cfg.partial
+    arbuckle:
+      kind: cisco_iol
+      startup-config: ./startup-configs/arbuckle.cfg.partial
+    odie:
+      kind: cisco_iol
+      startup-config: ./startup-configs/odie.cfg.partial
+    garfield:
+      kind: cisco_iol
+      startup-config: ./startup-configs/garfield.cfg.partial
+    arlene:
+      kind: cisco_iol
+      startup-config: ./startup-configs/arlene.cfg.partial
+    sw1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol_l2:latest
+      type: l2
+  links:
+    - endpoints: [ 'pooky:Ethernet0/1', 'sw1:Ethernet0/1' ]
+    - endpoints: [ 'odie:Ethernet0/1', 'sw1:Ethernet0/2' ]
+    - endpoints: [ 'arlene:Ethernet0/1', 'sw1:Ethernet0/3' ]
+    - endpoints: [ 'pooky:Ethernet0/2', 'arbuckle:Ethernet0/1' ]
+    - endpoints: [ 'odie:Ethernet0/2', 'garfield:Ethernet0/1' ]
+...

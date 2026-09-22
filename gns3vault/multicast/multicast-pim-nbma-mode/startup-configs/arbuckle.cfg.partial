@@ -1,0 +1,39 @@
+!
+hostname arbuckle
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ no shutdown
+ ip address 5.5.5.5 255.255.255.0
+!
+!
+interface Ethernet0/1
+ no shutdown
+ ip address 192.168.45.5 255.255.255.0
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line vty 0 4
+ exec-timeout 0 0
+ logging synchronous
+ exec prompt timestamp
+!
+end
