@@ -10,8 +10,8 @@ As a volunteer working at a huge Monkey Reserve located in The Netherlands you d
 - Configure OSPF on all routers, advertise all networks. Achieve full connectivity.
 - Configure sparse-dense-mode multicast on all routers.
 - Configure all routers manually so that router Gibbon is the Rendezvous Point (RP) only for the 224.4.4.4 multicast group. Use the loopback0 interface as the IP address for the RP.
-- Configure router Drill to join the multicast group 224.4.4.4 on it's Fastethernet interface.
-- Configure router Drill to join the multicast group 239.4.4.4 on it's Fastethernet interface.
+- Configure router Drill to join the multicast group 224.4.4.4 on it's Ethernet0/1 interface.
+- Configure router Drill to join the multicast group 239.4.4.4 on it's Ethernet0/1 interface.
 - Make sure you can ping the 224.4.4.4 group address and 239.4.4.4 group address from router Orangutan.
 
 ## Topology
