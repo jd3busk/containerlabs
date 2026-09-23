@@ -1,0 +1,193 @@
+{
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1790165429154",
+      "text": "192.168.12.0/24",
+      "position": {
+        "x": 238,
+        "y": 177
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790165454936",
+      "text": "192.168.23.0/24",
+      "position": {
+        "x": 289.5,
+        "y": 292
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790165470624",
+      "text": "192.168.34.0/24",
+      "position": {
+        "x": 432.5,
+        "y": 343
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790165513640",
+      "text": ".1",
+      "position": {
+        "x": 360,
+        "y": 105.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790165538616",
+      "text": ".2",
+      "position": {
+        "x": 184.5,
+        "y": 258.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790165547160",
+      "text": ".3",
+      "position": {
+        "x": 328,
+        "y": 377.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790165560200",
+      "text": ".4",
+      "position": {
+        "x": 517,
+        "y": 255.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790165568992",
+      "text": "Lo0: 3.3.3.3/32",
+      "position": {
+        "x": 341.5,
+        "y": 434
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    }
+  ],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "videoserver",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 360,
+        "y": 140
+      }
+    },
+    {
+      "id": "videoreceiver",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 480,
+        "y": 260
+      }
+    },
+    {
+      "id": "pong",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 360,
+        "y": 380
+      }
+    },
+    {
+      "id": "ping",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 220,
+        "y": 260
+      }
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link0",
+      "source": "videoserver",
+      "target": "ping",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    },
+    {
+      "id": "Clab-Link2",
+      "source": "pong",
+      "target": "ping",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    },
+    {
+      "id": "Clab-Link1",
+      "source": "videoreceiver",
+      "target": "pong",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

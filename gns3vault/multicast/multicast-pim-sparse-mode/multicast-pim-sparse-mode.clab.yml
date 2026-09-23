@@ -1,0 +1,24 @@
+name: multicast-pim-sparse-mode
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    videoserver:
+      kind: cisco_iol
+      startup-config: ./startup-configs/videoserver.cfg.partial
+    videoreceiver:
+      kind: cisco_iol
+      startup-config: ./startup-configs/videoreceiver.cfg.partial
+    pong:
+      kind: cisco_iol
+      startup-config: ./startup-configs/pong.cfg.partial
+    ping:
+      kind: cisco_iol
+      startup-config: ./startup-configs/ping.cfg.partial
+  links:
+  - endpoints: ['videoserver:Ethernet0/1', 'ping:Ethernet0/1']
+  - endpoints: ['videoreceiver:Ethernet0/1', 'pong:Ethernet0/2']
+  - endpoints: ['pong:Ethernet0/1', 'ping:Ethernet0/2']
