@@ -1,0 +1,29 @@
+name: multicast-rpf-failure
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    backhand:
+      kind: cisco_iol
+      startup-config: ./startup-configs/backhand.cfg.partial
+    livematch:
+      kind: cisco_iol
+      startup-config: ./startup-configs/livematch.cfg.partial
+    backspin:
+      kind: cisco_iol
+      startup-config: ./startup-configs/backspin.cfg.partial
+    ace:
+      kind: cisco_iol
+      startup-config: ./startup-configs/ace.cfg.partial
+    alley:
+      kind: cisco_iol
+      startup-config: ./startup-configs/alley.cfg.partial
+  links:
+  - endpoints: ['backhand:Ethernet0/1', 'ace:Ethernet0/1']
+  - endpoints: ['backhand:Ethernet0/2', 'backspin:Ethernet0/1']
+  - endpoints: ['livematch:Ethernet0/1', 'ace:Ethernet0/2']
+  - endpoints: ['backspin:Ethernet0/2', 'alley:Ethernet0/1']
+  - endpoints: ['ace:Ethernet0/3', 'alley:Ethernet0/2']
