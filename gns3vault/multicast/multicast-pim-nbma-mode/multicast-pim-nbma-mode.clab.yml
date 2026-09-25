@@ -32,4 +32,5 @@ topology:
     - endpoints: [ 'arlene:Ethernet0/1', 'sw1:Ethernet0/3' ]
     - endpoints: [ 'pooky:Ethernet0/2', 'arbuckle:Ethernet0/1' ]
     - endpoints: [ 'odie:Ethernet0/2', 'garfield:Ethernet0/1' ]
+
 ...
