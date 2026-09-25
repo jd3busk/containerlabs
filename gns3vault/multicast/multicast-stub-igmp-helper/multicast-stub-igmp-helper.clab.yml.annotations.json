@@ -1,0 +1,193 @@
+{
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1790173326175",
+      "text": "192.168.12.0/24",
+      "position": {
+        "x": 324.5,
+        "y": 177
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790173352030",
+      "text": "192.168.23.0/24",
+      "position": {
+        "x": 334,
+        "y": 318.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790173366958",
+      "text": "192.168.34.0/24",
+      "position": {
+        "x": 330.5,
+        "y": 459
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790173381966",
+      "text": ".1",
+      "position": {
+        "x": 180.5,
+        "y": 198
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790173390494",
+      "text": ".2",
+      "position": {
+        "x": 516,
+        "y": 196.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790173399702",
+      "text": ".3",
+      "position": {
+        "x": 185.5,
+        "y": 437
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790173408494",
+      "text": ".4",
+      "position": {
+        "x": 513,
+        "y": 438
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1790353714250",
+      "text": "STUB Boundary",
+      "position": {
+        "x": 332.29645093945726,
+        "y": 303.70563674321505
+      },
+      "fontSize": 10,
+      "fontColor": "#ff0000",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    }
+  ],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "videostation",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 220,
+        "y": 200
+      }
+    },
+    {
+      "id": "ba",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 480,
+        "y": 200
+      }
+    },
+    {
+      "id": "murdock",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 220,
+        "y": 440
+      }
+    },
+    {
+      "id": "receiver",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 480,
+        "y": 440
+      }
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link0",
+      "source": "videostation",
+      "target": "ba",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    },
+    {
+      "id": "Clab-Link1",
+      "source": "ba",
+      "target": "murdock",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    },
+    {
+      "id": "Clab-Link2",
+      "source": "murdock",
+      "target": "receiver",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

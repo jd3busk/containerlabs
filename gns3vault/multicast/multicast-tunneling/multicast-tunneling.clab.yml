@@ -1,0 +1,31 @@
+---
+name: multicast-tunneling
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    alpha:
+      kind: cisco_iol
+      startup-config: ./startup-configs/alpha.cfg.partial
+    bravo:
+      kind: cisco_iol
+      startup-config: ./startup-configs/bravo.cfg.partial
+    charlie:
+      kind: cisco_iol
+      startup-config: ./startup-configs/charlie.cfg.partial
+    delta:
+      kind: cisco_iol
+      startup-config: ./startup-configs/delta.cfg.partial
+    echo:
+      kind: cisco_iol
+      startup-config: ./startup-configs/echo.cfg.partial
+  links:
+  - endpoints: ['bravo:Ethernet0/1', 'alpha:Ethernet0/1']
+  - endpoints: ['bravo:Ethernet0/2', 'charlie:Ethernet0/1']
+  - endpoints: ['charlie:Ethernet0/2', 'delta:Ethernet0/1']
+  - endpoints: ['echo:Ethernet0/1', 'delta:Ethernet0/2']
+
+...

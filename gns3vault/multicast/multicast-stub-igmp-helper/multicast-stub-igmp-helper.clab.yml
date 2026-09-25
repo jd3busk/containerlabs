@@ -1,0 +1,27 @@
+---
+name: multicast-stub-igmp-helper
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    videostation:
+      kind: cisco_iol
+      startup-config: ./startup-configs/videostation.cfg.partial
+    ba:
+      kind: cisco_iol
+      startup-config: ./startup-configs/ba.cfg.partial
+    murdock:
+      kind: cisco_iol
+      startup-config: ./startup-configs/murdock.cfg.partial
+    receiver:
+      kind: cisco_iol
+      startup-config: ./startup-configs/receiver.cfg.partial
+  links:
+  - endpoints: ['videostation:Ethernet0/1', 'ba:Ethernet0/1']
+  - endpoints: ['ba:Ethernet0/2', 'murdock:Ethernet0/2']
+  - endpoints: ['murdock:Ethernet0/1', 'receiver:Ethernet0/1']
+
+...

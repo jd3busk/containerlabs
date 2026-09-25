@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1908.47" height="1489.09" viewBox="-20 -20 1908.47 1489.09" version="1.1" id="svg353">
+  <g class="annotation-groups-layer" transform="matrix(4.0463633,0,0,4.0463633,-566.4909,-1143.8211)" id="g2" />
+  <g class="annotation-shapes-layer" transform="matrix(4.0463633,0,0,4.0463633,-566.4909,-1143.8211)" id="g8">
+    <g class="annotation-shape" data-id="freeShape_1790356094252" id="g6">
+      <line x1="333" y1="455" x2="525" y2="455" stroke="#026428" stroke-width="14" id="line4" />
+    </g>
+  </g>
+  <defs id="defs23">
+    <filter id="text-shadow" x="-0.13970409" y="-0.41532221" width="1.2794082" height="1.8306444">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur" id="feGaussianBlur10" />
+      <feFlood flood-color="#3C3E41" result="color" id="feFlood12" />
+      <feComposite in="color" in2="blur" operator="in" result="shadow" id="feComposite14" />
+      <feMerge id="feMerge20">
+        <feMergeNode in="shadow" id="feMergeNode16" />
+        <feMergeNode in="SourceGraphic" id="feMergeNode18" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g class="export-graph-layer" transform="matrix(4.0463633,0,0,4.0463633,-566.4909,-1143.8211)" id="g299">
+    <g class="export-edge" data-id="Clab-Link0" id="g39">
+      <path d="M 280,440 180,340" fill="none" stroke="#969799" stroke-width="4" opacity="0.5" id="path25" />
+      <g class="edge-label" id="g31">
+        <rect x="220.32814" y="402.18021" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect27" />
+        <text x="248.18019" y="408.18021" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text29">Ethernet0/1</text>
+      </g>
+      <g class="edge-label" id="g37">
+        <rect x="183.96776" y="365.81979" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect33" />
+        <text x="211.81981" y="371.81979" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text35">Ethernet0/1</text>
+      </g>
+    </g>
+    <g class="export-edge" data-id="Clab-Link1" id="g55">
+      <path d="M 320,440 420,340" fill="none" stroke="#969799" stroke-width="4" opacity="0.5" id="path41" />
+      <g class="edge-label" id="g47">
+        <rect x="323.96774" y="402.18021" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect43" />
+        <text x="351.81979" y="408.18021" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text45">Ethernet0/2</text>
+      </g>
+      <g class="edge-label" id="g53">
+        <rect x="360.32816" y="365.81979" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect49" />
+        <text x="388.18021" y="371.81979" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text51">Ethernet0/1</text>
+      </g>
+    </g>
+    <g class="export-edge" data-id="Clab-Link2" id="g71">
+      <path d="m 457.14286,340 85.71428,100" fill="none" stroke="#969799" stroke-width="4" opacity="0.5" id="path57" />
+      <g class="edge-label" id="g63">
+        <rect x="458.57642" y="368.16653" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect59" />
+        <text x="486.42847" y="374.16653" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text61">Ethernet0/2</text>
+      </g>
+      <g class="edge-label" id="g69">
+        <rect x="485.71948" y="399.83347" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect65" />
+        <text x="513.57153" y="405.83347" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text67">Ethernet0/1</text>
+      </g>
+    </g>
+    <g class="export-edge" data-id="Clab-Link3" id="g87">
+      <path d="M 457.14286,580 542.85714,480" fill="none" stroke="#969799" stroke-width="4" opacity="0.5" id="path73" />
+      <g class="edge-label" id="g79">
+        <rect x="458.57642" y="539.83344" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect75" />
+        <text x="486.42847" y="545.83344" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text77">Ethernet0/1</text>
+      </g>
+      <g class="edge-label" id="g85">
+        <rect x="485.71948" y="508.16653" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect81" />
+        <text x="513.57153" y="514.16656" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text83">Ethernet0/2</text>
+      </g>
+    </g>
+    <g class="export-node topology-node" data-id="alpha" id="g129">
+      <g id="g123">
+        <rect x="140" y="300" width="40" height="40" rx="4" ry="4" fill="#005aff" id="rect89" />
+        <g transform="translate(140,300)" style="color:#005aff" id="g121">
+          <g transform="scale(0.3333)" id="g119">
+            <rect height="120" width="120" fill="currentColor" id="rect91" x="0" y="0" />
+            <g id="g117">
+              <g id="g97">
+                <path d="M 71.7,19.7 V 48 h 28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path93" />
+                <path d="m 91.2,38.5 7.5,7.6 c 1.3,1.3 1.3,3.1 0,4.3 L 91.1,58" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path95" />
+              </g>
+              <g id="g103">
+                <path d="m 20,47.8 h 28.4 v -28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path99" />
+                <path d="m 38.8,28.3 7.6,-7.5 c 1.3,-1.3 3.1,-1.3 4.3,0 l 7.7,7.6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path101" />
+              </g>
+              <g id="g109">
+                <path d="M 48,100.3 V 72 H 20" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path105" />
+                <path d="M 28.5,81.5 21,73.9 c -1.3,-1.3 -1.3,-3.1 0,-4.3 l 7.6,-7.7" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path107" />
+              </g>
+              <g id="g115">
+                <path d="M 100,71.9 H 71.6 v 28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path111" />
+                <path d="m 81.2,91.4 -7.6,7.5 c -1.3,1.3 -3.1,1.3 -4.3,0 l -7.7,-7.6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path113" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect x="142.31334" y="342" width="35.373322" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect125" />
+      <text x="160" y="351.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text127">alpha</text>
+    </g>
+    <g class="export-node topology-node" data-id="bravo" id="g171">
+      <g id="g165">
+        <rect x="280" y="440" width="40" height="40" rx="4" ry="4" fill="#005aff" id="rect131" />
+        <g transform="translate(280,440)" style="color:#005aff" id="g163">
+          <g transform="scale(0.3333)" id="g161">
+            <rect height="120" width="120" fill="currentColor" id="rect133" x="0" y="0" />
+            <g id="g159">
+              <g id="g139">
+                <path d="M 71.7,19.7 V 48 h 28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path135" />
+                <path d="m 91.2,38.5 7.5,7.6 c 1.3,1.3 1.3,3.1 0,4.3 L 91.1,58" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path137" />
+              </g>
+              <g id="g145">
+                <path d="m 20,47.8 h 28.4 v -28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path141" />
+                <path d="m 38.8,28.3 7.6,-7.5 c 1.3,-1.3 3.1,-1.3 4.3,0 l 7.7,7.6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path143" />
+              </g>
+              <g id="g151">
+                <path d="M 48,100.3 V 72 H 20" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path147" />
+                <path d="M 28.5,81.5 21,73.9 c -1.3,-1.3 -1.3,-3.1 0,-4.3 l 7.6,-7.7" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path149" />
+              </g>
+              <g id="g157">
+                <path d="M 100,71.9 H 71.6 v 28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path153" />
+                <path d="m 81.2,91.4 -7.6,7.5 c -1.3,1.3 -3.1,1.3 -4.3,0 l -7.7,-7.6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path155" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect x="282.00745" y="482" width="35.985138" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect167" />
+      <text x="300" y="491.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text169">bravo</text>
+    </g>
+    <g class="export-node topology-node" data-id="charlie" id="g213">
+      <g id="g207">
+        <rect x="420" y="300" width="40" height="40" rx="4" ry="4" fill="#005aff" id="rect173" />
+        <g transform="translate(420,300)" style="color:#005aff" id="g205">
+          <g transform="scale(0.3333)" id="g203">
+            <rect height="120" width="120" fill="currentColor" id="rect175" x="0" y="0" />
+            <g id="g201">
+              <g id="g181">
+                <path d="M 71.7,19.7 V 48 h 28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path177" />
+                <path d="m 91.2,38.5 7.5,7.6 c 1.3,1.3 1.3,3.1 0,4.3 L 91.1,58" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path179" />
+              </g>
+              <g id="g187">
+                <path d="m 20,47.8 h 28.4 v -28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path183" />
+                <path d="m 38.8,28.3 7.6,-7.5 c 1.3,-1.3 3.1,-1.3 4.3,0 l 7.7,7.6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path185" />
+              </g>
+              <g id="g193">
+                <path d="M 48,100.3 V 72 H 20" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path189" />
+                <path d="M 28.5,81.5 21,73.9 c -1.3,-1.3 -1.3,-3.1 0,-4.3 l 7.6,-7.7" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path191" />
+              </g>
+              <g id="g199">
+                <path d="M 100,71.9 H 71.6 v 28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path195" />
+                <path d="m 81.2,91.4 -7.6,7.5 c -1.3,1.3 -3.1,1.3 -4.3,0 l -7.7,-7.6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path197" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect x="419.52191" y="342" width="40.956146" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect209" />
+      <text x="440" y="351.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text211">charlie</text>
+    </g>
+    <g class="export-node topology-node" data-id="delta" id="g255">
+      <g id="g249">
+        <rect x="540" y="440" width="40" height="40" rx="4" ry="4" fill="#005aff" id="rect215" />
+        <g transform="translate(540,440)" style="color:#005aff" id="g247">
+          <g transform="scale(0.3333)" id="g245">
+            <rect height="120" width="120" fill="currentColor" id="rect217" x="0" y="0" />
+            <g id="g243">
+              <g id="g223">
+                <path d="M 71.7,19.7 V 48 h 28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path219" />
+                <path d="m 91.2,38.5 7.5,7.6 c 1.3,1.3 1.3,3.1 0,4.3 L 91.1,58" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path221" />
+              </g>
+              <g id="g229">
+                <path d="m 20,47.8 h 28.4 v -28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path225" />
+                <path d="m 38.8,28.3 7.6,-7.5 c 1.3,-1.3 3.1,-1.3 4.3,0 l 7.7,7.6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path227" />
+              </g>
+              <g id="g235">
+                <path d="M 48,100.3 V 72 H 20" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path231" />
+                <path d="M 28.5,81.5 21,73.9 c -1.3,-1.3 -1.3,-3.1 0,-4.3 l 7.6,-7.7" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path233" />
+              </g>
+              <g id="g241">
+                <path d="M 100,71.9 H 71.6 v 28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path237" />
+                <path d="m 81.2,91.4 -7.6,7.5 c -1.3,1.3 -3.1,1.3 -4.3,0 l -7.7,-7.6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path239" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect x="543.87018" y="482" width="32.259613" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect251" />
+      <text x="560" y="491.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text253">delta</text>
+    </g>
+    <g class="export-node topology-node" data-id="echo" id="g297">
+      <g id="g291">
+        <rect x="420" y="580" width="40" height="40" rx="4" ry="4" fill="#005aff" id="rect257" />
+        <g transform="translate(420,580)" style="color:#005aff" id="g289">
+          <g transform="scale(0.3333)" id="g287">
+            <rect height="120" width="120" fill="currentColor" id="rect259" x="0" y="0" />
+            <g id="g285">
+              <g id="g265">
+                <path d="M 71.7,19.7 V 48 h 28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path261" />
+                <path d="m 91.2,38.5 7.5,7.6 c 1.3,1.3 1.3,3.1 0,4.3 L 91.1,58" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path263" />
+              </g>
+              <g id="g271">
+                <path d="m 20,47.8 h 28.4 v -28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path267" />
+                <path d="m 38.8,28.3 7.6,-7.5 c 1.3,-1.3 3.1,-1.3 4.3,0 l 7.7,7.6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path269" />
+              </g>
+              <g id="g277">
+                <path d="M 48,100.3 V 72 H 20" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path273" />
+                <path d="M 28.5,81.5 21,73.9 c -1.3,-1.3 -1.3,-3.1 0,-4.3 l 7.6,-7.7" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path275" />
+              </g>
+              <g id="g283">
+                <path d="M 100,71.9 H 71.6 v 28" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path279" />
+                <path d="m 81.2,91.4 -7.6,7.5 c -1.3,1.3 -3.1,1.3 -4.3,0 l -7.7,-7.6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" id="path281" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect x="423.87018" y="622" width="32.259613" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect293" />
+      <text x="440" y="631.40002" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text295">echo</text>
+    </g>
+  </g>
+  <g class="annotation-shapes-layer" transform="matrix(4.0463633,0,0,4.0463633,-566.4909,-1143.8211)" id="g301" />
+  <g class="annotation-text-layer" transform="matrix(4.0463633,0,0,4.0463633,-566.4909,-1143.8211)" id="g351">
+    <g class="annotation-text" data-id="freeText_1790354876414" id="g305">
+      <text x="197.44269" y="393.58139" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="start" id="text303">192.168.12.0/24</text>
+    </g>
+    <g class="annotation-text" data-id="freeText_1790354932157" id="g309">
+      <text x="337.68698" y="393.81522" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="start" id="text307">192.168.23.0/24</text>
+    </g>
+    <g class="annotation-text" data-id="freeText_1790354974989" id="g313">
+      <text x="463.10663" y="394.04904" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="start" id="text311">192.168.34.0/24</text>
+    </g>
+    <g class="annotation-text" data-id="freeText_1790355004341" id="g317">
+      <text x="460.04608" y="532.64612" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="start" id="text315">192.168.45.0/24</text>
+    </g>
+    <g class="annotation-text" data-id="freeText_1790355066055" id="g321">
+      <text x="45" y="395" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="middle" id="text319" />
+    </g>
+    <g class="annotation-text" data-id="freeText_1790355082413" id="g325">
+      <text x="165.0367" y="290.42792" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="middle" id="text323">.1</text>
+    </g>
+    <g class="annotation-text" data-id="freeText_1790355100621" id="g329">
+      <text x="304.5014" y="431.80991" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="middle" id="text327">.2</text>
+    </g>
+    <g class="annotation-text" data-id="freeText_1790355111213" id="g333">
+      <text x="446.73413" y="289.8663" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="middle" id="text331">.3</text>
+    </g>
+    <g class="annotation-text" data-id="freeText_1790355127085" id="g337">
+      <text x="597.82434" y="461.62384" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="middle" id="text335">.4</text>
+    </g>
+    <g class="annotation-text" data-id="freeText_1790355138653" id="g341">
+      <text x="444.8089" y="570.41974" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="middle" id="text339">.5</text>
+    </g>
+    <g class="annotation-text" data-id="freeText_1790356155673" id="g345">
+      <text x="407.36121" y="458.29959" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#ffffff" text-anchor="start" id="text343">GRE Tunnel</text>
+    </g>
+    <g class="annotation-text" data-id="freeText_1790354974989-1" id="g349">
+      <text x="398.25986" y="472.99368" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="start" id="text347">192.168.24.0/24</text>
+    </g>
+  </g>
+</svg>
