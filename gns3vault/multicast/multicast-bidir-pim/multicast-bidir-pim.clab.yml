@@ -1,0 +1,31 @@
+---
+name: multicast-bidir-pim
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    r1:
+      kind: cisco_iol
+      startup-config: ./startup-configs/r1.cfg.partial
+    r2:
+      kind: cisco_iol
+      startup-config: ./startup-configs/r2.cfg.partial
+    r3:
+      kind: cisco_iol
+      startup-config: ./startup-configs/r3.cfg.partial
+    r4:
+      kind: cisco_iol
+      startup-config: ./startup-configs/r4.cfg.partial
+    r5:
+      kind: cisco_iol
+      startup-config: ./startup-configs/r5.cfg.partial
+  links:
+    - endpoints: ['r1:Ethernet0/1', 'r2:Ethernet0/2']
+    - endpoints: ['r1:Ethernet0/2', 'r3:Ethernet0/1']
+    - endpoints: ['r2:Ethernet0/1', 'r4:Ethernet0/1']
+    - endpoints: ['r3:Ethernet0/2', 'r5:Ethernet0/1']
+
+...
