@@ -1,0 +1,25 @@
+---
+name: multicast-boundary-autorp
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:latest
+  nodes:
+    production:
+      kind: cisco_iol
+      startup-config: ./startup-configs/production.cfg.partial
+    border:
+      kind: cisco_iol
+      startup-config: ./startup-configs/border.cfg.partial
+    partner:
+      kind: cisco_iol
+      startup-config: ./startup-configs/partner.cfg.partial
+    coaches:
+      kind: cisco_iol
+      startup-config: ./startup-configs/coaches.cfg.partial
+  links:
+    - endpoints: ['production:Ethernet0/1', 'border:Ethernet0/1']
+    - endpoints: ['border:Ethernet0/2', 'partner:Ethernet0/1']
+    - endpoints: ['border:Ethernet0/3', 'coaches:Ethernet0/1']
