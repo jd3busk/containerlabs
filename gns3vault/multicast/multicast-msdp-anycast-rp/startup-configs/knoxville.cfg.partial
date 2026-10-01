@@ -1,0 +1,38 @@
+!
+hostname knoxville
+!
+!
+!
+interface Loopback0
+ no shutdown
+ ip address 2.2.2.2 255.255.255.255
+!
+interface Loopback1
+ no shutdown
+ ip address 12.12.12.12 255.255.255.255
+!
+interface Ethernet0/1
+ no shutdown
+ ip address 192.168.12.2 255.255.255.0
+!
+interface Ethernet0/2
+ no shutdown
+ ip address 192.168.24.2 255.255.255.0
+!
+!
+!
+router ospf 1
+ router-id 2.2.2.2
+ network 0.0.0.0 255.255.255.255 area 0
+!
+!
+!
+line vty 0 4
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ login local
+ exec prompt timestamp
+ transport input ssh
+!
+end

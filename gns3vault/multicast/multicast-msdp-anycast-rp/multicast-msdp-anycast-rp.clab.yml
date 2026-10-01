@@ -1,0 +1,28 @@
+---
+name: multicast-msdp-anycast-rp
+prefix: ""
+
+topology:
+  nodes:
+    nashville:
+      kind: cisco_iol
+      startup-config: ./startup-configs/nashville.cfg.partial
+      image: vrnetlab/cisco_iol:17.16.01a
+    knoxville:
+      kind: cisco_iol
+      startup-config: ./startup-configs/knoxville.cfg.partial
+      image: vrnetlab/cisco_iol:17.16.01a
+    video-server:
+      kind: cisco_iol
+      startup-config: ./startup-configs/video-server.cfg.partial
+      image: vrnetlab/cisco_iol:17.16.01a
+    video-client:
+      kind: cisco_iol
+      startup-config: ./startup-configs/video-client.cfg.partial
+      image: vrnetlab/cisco_iol:17.16.01a
+  links:
+    - endpoints: [ "nashville:Ethernet0/1", "knoxville:Ethernet0/1" ]
+    - endpoints: [ "nashville:Ethernet0/2", "video-server:Ethernet0/1" ]
+    - endpoints: [ "knoxville:Ethernet0/2", "video-client:Ethernet0/1" ]
+
+...
