@@ -1,0 +1,34 @@
+---
+name: multicast-pim-assert
+prefix: ""
+
+topology:
+  nodes:
+    picard:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+      startup-config: ./startup-configs/picard.cfg.partial
+    spock:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+      startup-config: ./startup-configs/spock.cfg.partial
+    kirk:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+      startup-config: ./startup-configs/kirk.cfg.partial
+    switch:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.16.01a
+    scotty:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+      startup-config: ./startup-configs/scotty.cfg.partial
+  links:
+    - endpoints: [ "picard:Ethernet0/1", "spock:Ethernet0/1" ]
+    - endpoints: [ "picard:Ethernet0/2", "kirk:Ethernet0/1" ]
+    - endpoints: [ "spock:Ethernet0/2", "switch:Ethernet0/1" ]
+    - endpoints: [ "kirk:Ethernet0/2", "switch:Ethernet0/2" ]
+    - endpoints: [ "switch:Ethernet0/3", "scotty:Ethernet0/1" ]
+
+...
