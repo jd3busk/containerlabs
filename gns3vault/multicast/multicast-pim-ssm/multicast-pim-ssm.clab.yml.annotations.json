@@ -1,0 +1,149 @@
+{
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1791202572138",
+      "text": "192.168.12.0/24",
+      "position": {
+        "x": 298.5,
+        "y": 320.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1791202601241",
+      "text": "192.168.23.0/24",
+      "position": {
+        "x": 540.5,
+        "y": 320.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1791202625824",
+      "text": "Lo0: 2.2.2.2/32",
+      "position": {
+        "x": 422.5,
+        "y": 393.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1791202642856",
+      "text": ".1",
+      "position": {
+        "x": 199.5,
+        "y": 308
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1791202659825",
+      "text": ".2",
+      "position": {
+        "x": 439.5,
+        "y": 307
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1791202687777",
+      "text": ".3",
+      "position": {
+        "x": 680,
+        "y": 306.5
+      },
+      "fontSize": 10,
+      "fontColor": "#003bff",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial"
+    }
+  ],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "video-server",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 200,
+        "y": 340
+      }
+    },
+    {
+      "id": "transit",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 440,
+        "y": 340
+      },
+      "icon": "pe"
+    },
+    {
+      "id": "video-client",
+      "position": {
+        "x": 680,
+        "y": 340
+      },
+      "icon": "pe",
+      "interfacePattern": "Ethernet0/{n}",
+      "iconCornerRadius": 0
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link0",
+      "source": "video-server",
+      "target": "transit",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    },
+    {
+      "id": "Clab-Link1",
+      "source": "transit",
+      "target": "video-client",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

@@ -1,0 +1,23 @@
+---
+name: multicast-pim-ssm
+prefix: ""
+
+topology:
+  nodes:
+    video-server:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+      startup-config: ./startup-configs/video-server.cfg.partial
+    transit:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+      startup-config: ./startup-configs/transit.cfg.partial
+    video-client:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+      startup-config: ./startup-configs/video-client.cfg.partial
+  links:
+    - endpoints: [ "video-server:Ethernet0/1", "transit:Ethernet0/1" ]
+    - endpoints: [ "transit:Ethernet0/2", "video-client:Ethernet0/1" ]
+
+...
