@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="3399.17" height="1923.92" viewBox="-20 -20 3399.17 1923.92" version="1.1" id="svg353">
-  <g class="annotation-groups-layer" transform="matrix(6,0,0,6,-638.38477,-1000.875)" id="g2" />
-  <g class="annotation-shapes-layer" transform="matrix(6,0,0,6,-638.38477,-1000.875)" id="g4" />
+<svg xmlns="http://www.w3.org/2000/svg" width="2955.58" height="1674.83" viewBox="-20 -20 2955.58 1674.83" version="1.1" id="svg353">
+  <g class="annotation-groups-layer" transform="matrix(5.2066869,0,0,5.2066869,-553.97825,-868.54046)" id="g2" />
+  <g class="annotation-shapes-layer" transform="matrix(5.2066869,0,0,5.2066869,-553.97825,-868.54046)" id="g4" />
   <defs id="defs19">
-    <filter id="text-shadow" x="-0.13553341" y="-0.44872919" width="1.2710668" height="1.8974584">
+    <filter id="text-shadow" x="-0.080870487" y="-0.41532221" width="1.161741" height="1.8306444">
       <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur" id="feGaussianBlur6" />
       <feFlood flood-color="#3C3E41" result="color" id="feFlood8" />
       <feComposite in="color" in2="blur" operator="in" result="shadow" id="feComposite10" />
@@ -13,16 +13,16 @@
       </feMerge>
     </filter>
   </defs>
-  <g class="export-graph-layer" transform="matrix(6,0,0,6,-638.38477,-1000.875)" id="g295">
+  <g class="export-graph-layer" transform="matrix(5.2066869,0,0,5.2066869,-553.97825,-868.54046)" id="g295">
     <g class="export-edge" data-id="Clab-Link0" id="g35">
       <path d="M 360,288.88889 220,211.11111" fill="none" stroke="#969799" stroke-width="4" opacity="0.5" id="path21" />
       <g class="edge-label" id="g27">
-        <rect x="288.44009" y="258.60675" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect23" />
-        <text x="316.29214" y="264.60675" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text25">Ethernet0/1</text>
+        <rect x="283.19513" y="255.69289" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect23" />
+        <text x="311.04718" y="261.69287" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text25">Ethernet0/1</text>
       </g>
       <g class="edge-label" id="g33">
-        <rect x="235.85582" y="229.39326" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect29" />
-        <text x="263.70786" y="235.39326" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text31">Ethernet0/1</text>
+        <rect x="241.10075" y="232.30711" width="55.704102" height="12" fill="#ffffff" rx="4" ry="4" id="rect29" />
+        <text x="268.95282" y="238.30711" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text31">Ethernet0/1</text>
       </g>
     </g>
     <g class="export-edge" data-id="Clab-Link1" id="g51">
@@ -58,7 +58,7 @@
         <text x="584.64465" y="355.35535" font-size="10px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" dominant-baseline="central" fill="#3b3b3b" text-anchor="middle" id="text79">Ethernet0/1</text>
       </g>
     </g>
-    <g class="export-node topology-node" data-id="joker" id="g125">
+    <g class="export-node topology-node" data-id="rendezvous-point" id="g125">
       <g id="g119">
         <rect x="360" y="280" width="40" height="40" rx="4" ry="4" fill="#005aff" id="rect85" />
         <g transform="translate(360,280)" style="color:#005aff" id="g117">
@@ -85,10 +85,10 @@
           </g>
         </g>
       </g>
-      <rect x="363.87567" y="322" width="32.248688" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect121" />
-      <text x="380" y="331.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text123">joker</text>
+      <rect x="333.0882" y="322" width="93.823639" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect121" />
+      <text x="380" y="331.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text123">rendezvous-point</text>
     </g>
-    <g class="export-node topology-node" data-id="mrfreeze" id="g167">
+    <g class="export-node topology-node" data-id="transit-2" id="g167">
       <g id="g161">
         <rect x="480" y="420" width="40" height="40" rx="4" ry="4" fill="#005aff" id="rect127" />
         <g transform="translate(480,420)" style="color:#005aff" id="g159">
@@ -115,10 +115,10 @@
           </g>
         </g>
       </g>
-      <rect x="473.93091" y="462" width="52.138184" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect163" />
-      <text x="500" y="471.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text165">mrfreeze</text>
+      <rect x="475.79367" y="462" width="48.412659" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect163" />
+      <text x="500" y="471.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text165">transit-2</text>
     </g>
-    <g class="export-node topology-node" data-id="catwoman" id="g209">
+    <g class="export-node topology-node" data-id="mapping-agent" id="g209">
       <g id="g203">
         <rect x="180" y="180" width="40" height="40" rx="4" ry="4" fill="#005aff" id="rect169" />
         <g transform="translate(180,180)" style="color:#005aff" id="g201">
@@ -145,10 +145,10 @@
           </g>
         </g>
       </g>
-      <rect x="170.50583" y="222" width="58.988342" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect205" />
-      <text x="200" y="231.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text207">catwoman</text>
+      <rect x="158.68193" y="222" width="82.636139" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect205" />
+      <text x="200" y="231.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text207">mapping-agent</text>
     </g>
-    <g class="export-node topology-node" data-id="batman" id="g251">
+    <g class="export-node topology-node" data-id="receiver" id="g251">
       <g id="g245">
         <rect x="620" y="280" width="40" height="40" rx="4" ry="4" fill="#005aff" id="rect211" />
         <g transform="translate(620,280)" style="color:#005aff" id="g243">
@@ -175,10 +175,10 @@
           </g>
         </g>
       </g>
-      <rect x="617.34235" y="322" width="45.315338" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect247" />
-      <text x="640" y="331.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text249">batman</text>
+      <rect x="616.10504" y="322" width="47.789917" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect247" />
+      <text x="640" y="331.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text249">receiver</text>
     </g>
-    <g class="export-node topology-node" data-id="robin" id="g293">
+    <g class="export-node topology-node" data-id="transit-1" id="g293">
       <g id="g287">
         <rect x="180" y="420" width="40" height="40" rx="4" ry="4" fill="#005aff" id="rect253" />
         <g transform="translate(180,420)" style="color:#005aff" id="g285">
@@ -205,12 +205,12 @@
           </g>
         </g>
       </g>
-      <rect x="183.56155" y="462" width="32.876892" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect289" />
-      <text x="200" y="471.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text291">robin</text>
+      <rect x="175.79367" y="462" width="48.412659" height="18.799999" fill="rgba(0, 0, 0, 0.7)" rx="3" ry="3" id="rect289" />
+      <text x="200" y="471.39999" font-size="11.2px" font-weight="500" font-family="Roboto, sans-serif" dominant-baseline="central" fill="#f5f5f5" text-anchor="middle" filter="url(#text-shadow)" id="text291">transit-1</text>
     </g>
   </g>
-  <g class="annotation-shapes-layer" transform="matrix(6,0,0,6,-638.38477,-1000.875)" id="g297" />
-  <g class="annotation-text-layer" transform="matrix(6,0,0,6,-638.38477,-1000.875)" id="g351">
+  <g class="annotation-shapes-layer" transform="matrix(5.2066869,0,0,5.2066869,-553.97825,-868.54046)" id="g297" />
+  <g class="annotation-text-layer" transform="matrix(5.2066869,0,0,5.2066869,-553.97825,-868.54046)" id="g351">
     <g class="annotation-text" data-id="freeText_1791220208901" id="g301">
       <text x="174" y="205" font-family="Arial" font-size="10px" font-weight="bold" font-style="normal" fill="#003bff" text-anchor="end" id="text299">Lo0: 1.1.1.1/32</text>
     </g>

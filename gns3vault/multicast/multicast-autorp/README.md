@@ -4,24 +4,16 @@
 
 * All IP addresses, OSPF routing and PIM-SM have been preconfigured for you.
 * Configure AutoRP.
-* Joker's Loopback0 is the Rendezvous Point (RP).
-* Catwoman's Loopback0 is the Mapping Agent (MP).
-* Configure Batman's Ethernet0/1 to join the multicast group 224.4.4.4.
-* Make sure you can ping the 224.4.4.4 group address from router Catwoman.
+* rendezvous-point's Loopback0 is the Rendezvous Point (RP).
+* mapping-agent's Loopback0 is the Mapping Agent (MP).
+* Configure receiver's Ethernet0/1 to join the multicast group 224.4.4.4.
+* Make sure you can ping the 224.4.4.4 group address from router mapping-agent.
 
 ## Topology
 
 <img src="./topology.svg" style="max-width: 700px; width: 100%; height: auto;">
 
 ## Solutions
-
-**All IP addresses, OSPF routing and PIM-SM have been preconfigured for you.**
-```
-# All Routers
-show ip interface brief
-show ip ospf neighbor
-show ip pim neighbor
-```
 
 **Configure AutoRP.**
 ```
@@ -33,9 +25,9 @@ ip pim autorp listener
 end
 ```
 
-**Joker's Loopback0 is the Rendezvous Point (RP).**
+**rendezvous-point's Loopback0 is the Rendezvous Point (RP).**
 ```
-# joker
+# rendezvous-point
 configure terminal
 
 ip pim send-rp-announce Loopback0 scope 20
@@ -43,9 +35,9 @@ ip pim send-rp-announce Loopback0 scope 20
 end
 ```
 
-**Catwoman's Loopback0 is the Mapping Agent (MP).**
+**mapping-agent's Loopback0 is the Mapping Agent (MP).**
 ```
-# catwoman
+# mapping-agent
 configure terminal
 
 ip pim send-rp-discovery Loopback0 scope 20
@@ -53,9 +45,9 @@ ip pim send-rp-discovery Loopback0 scope 20
 end
 ```
 
-**Configure Batman's Ethernet0/1 to join the multicast group 224.4.4.4.**
+**Configure receiver's Ethernet0/1 to join the multicast group 224.4.4.4.**
 ```
-# batman
+# receiver
 configure terminal
 
 interface Ethernet0/1
@@ -64,60 +56,58 @@ interface Ethernet0/1
 end
 ```
 
-**Make sure you can ping the 224.4.4.4 group address from router Catwoman.**
+**Make sure you can ping the 224.4.4.4 group address from router mapping-agent.**
 ```
-# catwoman
+# mapping-agent
 ping 224.1.1.1 repeat 5
 ```
 
 ## Verification
 
-**All IP addresses, OSPF routing and PIM-SM have been preconfigured for you.**
-
-All routers:
-
 ```text
+# All routers
 show ip interface brief
 show ip ospf neighbor
 show ip pim neighbor
 ```
 
-**Configure AutoRP.**
-
-All routers:
-
+Verify: <mark>***AutoRP is enabled***</mark>
 ```text
+#All routers
 show ip pim autorp
 ```
 
-**Joker's Loopback0 is the Rendezvous Point (RP).**
-
-All routers—look for RP `2.2.2.2`:
+Verify: <mark>***RP 2.2.2.2***</mark>
 
 ```text
+# All routers
 show ip pim rp mapping
 ```
 
-**Catwoman's Loopback0 is the Mapping Agent (MP).**
-
-Batman—look for information source `1.1.1.1`, via Auto-RP:
+Verify: <mark>***This system is an RP-mapping agent (Loopback0)***</mark>
 
 ```text
+# mapping-agent
 show ip pim rp mapping
 ```
 
-**Configure Batman's Ethernet0/1 to join the multicast group.**
-
-Batman—look for membership on Ethernet0/1:
+Verify: <mark>***Info source: 1.1.1.1***</mark>
 
 ```text
+# rendezvous-point, transit-1, transit-2 & receiver
+show ip pim rp mapping
+```
+
+Verify: <mark>***224.1.1.1***</mark>'s Last Reporter is <mark>***192.168.45.5***</mark>
+
+```text
+# transit-2 & receiver
 show ip igmp groups 224.1.1.1
 ```
 
-**Make sure you can ping the group address from Catwoman.**
-
-Catwoman:
+Verify: <mark>***Reply to request # from 192.168.45.5***</mark>
 
 ```text
-ping 224.1.1.1 repeat 5
+# mapping-agent
+ping 224.1.1.1 repeat 5 source Ethernet0/1
 ```

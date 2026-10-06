@@ -202,7 +202,7 @@
   "networkNodeAnnotations": [],
   "nodeAnnotations": [
     {
-      "id": "joker",
+      "id": "rendezvous-point",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 360,
@@ -210,7 +210,7 @@
       }
     },
     {
-      "id": "mrfreeze",
+      "id": "transit-2",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 480,
@@ -218,7 +218,7 @@
       }
     },
     {
-      "id": "catwoman",
+      "id": "mapping-agent",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 180,
@@ -226,7 +226,7 @@
       }
     },
     {
-      "id": "batman",
+      "id": "receiver",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 620,
@@ -234,7 +234,7 @@
       }
     },
     {
-      "id": "robin",
+      "id": "transit-1",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 180,
@@ -245,17 +245,17 @@
   "edgeAnnotations": [
     {
       "id": "Clab-Link0",
-      "source": "joker",
-      "target": "catwoman",
+      "source": "rendezvous-point",
+      "target": "mapping-agent",
       "sourceEndpoint": "Ethernet0/1",
       "targetEndpoint": "Ethernet0/1",
       "endpointLabelOffsetEnabled": true,
-      "endpointLabelOffset": 50
+      "endpointLabelOffset": 56
     },
     {
       "id": "Clab-Link1",
-      "source": "joker",
-      "target": "robin",
+      "source": "rendezvous-point",
+      "target": "transit-1",
       "sourceEndpoint": "Ethernet0/2",
       "targetEndpoint": "Ethernet0/1",
       "endpointLabelOffsetEnabled": true,
@@ -263,8 +263,8 @@
     },
     {
       "id": "Clab-Link2",
-      "source": "mrfreeze",
-      "target": "robin",
+      "source": "transit-2",
+      "target": "transit-1",
       "sourceEndpoint": "Ethernet0/1",
       "targetEndpoint": "Ethernet0/2",
       "endpointLabelOffsetEnabled": true,
@@ -272,8 +272,8 @@
     },
     {
       "id": "Clab-Link3",
-      "source": "mrfreeze",
-      "target": "batman",
+      "source": "transit-2",
+      "target": "receiver",
       "sourceEndpoint": "Ethernet0/2",
       "targetEndpoint": "Ethernet0/1",
       "endpointLabelOffsetEnabled": true,
