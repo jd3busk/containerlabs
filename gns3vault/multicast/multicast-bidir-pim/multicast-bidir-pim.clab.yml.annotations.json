@@ -164,6 +164,40 @@
       "textDecoration": "none",
       "textAlign": "left",
       "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1791302834330",
+      "text": "RP",
+      "position": {
+        "x": 201,
+        "y": 239
+      },
+      "fontSize": 10,
+      "fontColor": "#ff0000",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial",
+      "width": 44,
+      "height": 43
+    },
+    {
+      "id": "freeText_1791302910752",
+      "text": "BIDIR",
+      "position": {
+        "x": 193.5,
+        "y": 223.5
+      },
+      "fontSize": 10,
+      "fontColor": "#ff0000",
+      "fontWeight": "bold",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "center",
+      "fontFamily": "Arial",
+      "width": 45,
+      "height": 43
     }
   ],
   "freeShapeAnnotations": [],
@@ -172,7 +206,7 @@
   "networkNodeAnnotations": [],
   "nodeAnnotations": [
     {
-      "id": "r1",
+      "id": "rp",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 280,
@@ -180,7 +214,7 @@
       }
     },
     {
-      "id": "r2",
+      "id": "transit-1",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 140,
@@ -188,7 +222,7 @@
       }
     },
     {
-      "id": "r3",
+      "id": "transit-2",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 420,
@@ -196,7 +230,7 @@
       }
     },
     {
-      "id": "r4",
+      "id": "endpoint-1",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 140,
@@ -204,7 +238,7 @@
       }
     },
     {
-      "id": "r5",
+      "id": "endpoint-2",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 420,
@@ -215,8 +249,8 @@
   "edgeAnnotations": [
     {
       "id": "Clab-Link0",
-      "source": "r1",
-      "target": "r2",
+      "source": "rp",
+      "target": "transit-1",
       "sourceEndpoint": "Ethernet0/1",
       "targetEndpoint": "Ethernet0/2",
       "endpointLabelOffsetEnabled": true,
@@ -224,8 +258,8 @@
     },
     {
       "id": "Clab-Link1",
-      "source": "r1",
-      "target": "r3",
+      "source": "rp",
+      "target": "transit-2",
       "sourceEndpoint": "Ethernet0/2",
       "targetEndpoint": "Ethernet0/1",
       "endpointLabelOffsetEnabled": true,
@@ -233,8 +267,8 @@
     },
     {
       "id": "Clab-Link2",
-      "source": "r2",
-      "target": "r4",
+      "source": "transit-1",
+      "target": "endpoint-1",
       "sourceEndpoint": "Ethernet0/1",
       "targetEndpoint": "Ethernet0/1",
       "endpointLabelOffsetEnabled": true,
@@ -242,8 +276,8 @@
     },
     {
       "id": "Clab-Link3",
-      "source": "r3",
-      "target": "r5",
+      "source": "transit-2",
+      "target": "endpoint-2",
       "sourceEndpoint": "Ethernet0/2",
       "targetEndpoint": "Ethernet0/1",
       "endpointLabelOffsetEnabled": true,

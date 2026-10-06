@@ -7,25 +7,25 @@ topology:
     cisco_iol:
       image: vrnetlab/cisco_iol:latest
   nodes:
-    r1:
+    rp:
       kind: cisco_iol
-      startup-config: ./startup-configs/r1.cfg.partial
-    r2:
+      startup-config: ./startup-configs/rp.cfg.partial
+    transit-1:
       kind: cisco_iol
-      startup-config: ./startup-configs/r2.cfg.partial
-    r3:
+      startup-config: ./startup-configs/transit-1.cfg.partial
+    transit-2:
       kind: cisco_iol
-      startup-config: ./startup-configs/r3.cfg.partial
-    r4:
+      startup-config: ./startup-configs/transit-2.cfg.partial
+    endpoint-1:
       kind: cisco_iol
-      startup-config: ./startup-configs/r4.cfg.partial
-    r5:
+      startup-config: ./startup-configs/endpoint-1.cfg.partial
+    endpoint-2:
       kind: cisco_iol
-      startup-config: ./startup-configs/r5.cfg.partial
+      startup-config: ./startup-configs/endpoint-2.cfg.partial
   links:
-    - endpoints: ['r1:Ethernet0/1', 'r2:Ethernet0/2']
-    - endpoints: ['r1:Ethernet0/2', 'r3:Ethernet0/1']
-    - endpoints: ['r2:Ethernet0/1', 'r4:Ethernet0/1']
-    - endpoints: ['r3:Ethernet0/2', 'r5:Ethernet0/1']
+    - endpoints: ['rp:Ethernet0/1', 'transit-1:Ethernet0/2']
+    - endpoints: ['rp:Ethernet0/2', 'transit-2:Ethernet0/1']
+    - endpoints: ['transit-1:Ethernet0/1', 'endpoint-1:Ethernet0/1']
+    - endpoints: ['transit-2:Ethernet0/2', 'endpoint-2:Ethernet0/1']
 
 ...
