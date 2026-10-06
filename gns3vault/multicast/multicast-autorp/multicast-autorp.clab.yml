@@ -7,25 +7,25 @@ topology:
     cisco_iol:
       image: vrnetlab/cisco_iol:latest
   nodes:
-    rendezvous-point:
+    ma:
       kind: cisco_iol
-      startup-config: ./startup-configs/rendezvous-point.cfg.partial
-    transit-2:
+      startup-config: ./startup-configs/ma.cfg.partial
+    transit:
       kind: cisco_iol
-      startup-config: ./startup-configs/transit-2.cfg.partial
-    mapping-agent:
+      startup-config: ./startup-configs/transit.cfg.partial
+    source:
       kind: cisco_iol
-      startup-config: ./startup-configs/mapping-agent.cfg.partial
+      startup-config: ./startup-configs/source.cfg.partial
     receiver:
       kind: cisco_iol
       startup-config: ./startup-configs/receiver.cfg.partial
-    transit-1:
+    rp:
       kind: cisco_iol
-      startup-config: ./startup-configs/transit-1.cfg.partial
+      startup-config: ./startup-configs/rp.cfg.partial
   links:
-  - endpoints: ['rendezvous-point:Ethernet0/1', 'mapping-agent:Ethernet0/1']
-  - endpoints: ['rendezvous-point:Ethernet0/2', 'transit-1:Ethernet0/1']
-  - endpoints: ['transit-2:Ethernet0/1', 'transit-1:Ethernet0/2']
-  - endpoints: ['transit-2:Ethernet0/2', 'receiver:Ethernet0/1']
+  - endpoints: ['ma:Ethernet0/1', 'source:Ethernet0/1']
+  - endpoints: ['ma:Ethernet0/2', 'rp:Ethernet0/1']
+  - endpoints: ['transit:Ethernet0/1', 'rp:Ethernet0/2']
+  - endpoints: ['transit:Ethernet0/2', 'receiver:Ethernet0/1']
 
 ...

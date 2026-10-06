@@ -2,10 +2,10 @@
   "freeTextAnnotations": [
     {
       "id": "freeText_1791220208901",
-      "text": "Lo0: 1.1.1.1/32",
+      "text": "Lo0: 3.3.3.3/32",
       "position": {
         "x": 102,
-        "y": 180
+        "y": 426.3289873588089
       },
       "fontSize": 10,
       "fontColor": "#003bff",
@@ -167,10 +167,10 @@
     },
     {
       "id": "freeText_1791220401180",
-      "text": "MA",
+      "text": "Rendezvous Point",
       "position": {
-        "x": 119,
-        "y": 168
+        "x": 79.20160481638445,
+        "y": 412.42310303206597
       },
       "fontSize": 10,
       "fontColor": "#e40000",
@@ -178,13 +178,15 @@
       "fontStyle": "normal",
       "textDecoration": "none",
       "textAlign": "center",
-      "fontFamily": "Arial"
+      "fontFamily": "Arial",
+      "width": 99,
+      "height": 43
     },
     {
       "id": "freeText_1791220432949",
-      "text": "RP",
+      "text": "Mapping Agent",
       "position": {
-        "x": 419,
+        "x": 401.5,
         "y": 263
       },
       "fontSize": 10,
@@ -193,7 +195,9 @@
       "fontStyle": "normal",
       "textDecoration": "none",
       "textAlign": "center",
-      "fontFamily": "Arial"
+      "fontFamily": "Arial",
+      "width": 82,
+      "height": 43
     }
   ],
   "freeShapeAnnotations": [],
@@ -202,27 +206,19 @@
   "networkNodeAnnotations": [],
   "nodeAnnotations": [
     {
-      "id": "rendezvous-point",
-      "interfacePattern": "e0/{n}",
-      "position": {
-        "x": 360,
-        "y": 280
-      }
-    },
-    {
-      "id": "transit-2",
-      "interfacePattern": "e0/{n}",
-      "position": {
-        "x": 480,
-        "y": 420
-      }
-    },
-    {
-      "id": "mapping-agent",
+      "id": "source",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 180,
         "y": 180
+      }
+    },
+    {
+      "id": "transit",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 480,
+        "y": 420
       }
     },
     {
@@ -234,7 +230,15 @@
       }
     },
     {
-      "id": "transit-1",
+      "id": "ma",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 360,
+        "y": 280
+      }
+    },
+    {
+      "id": "rp",
       "interfacePattern": "e0/{n}",
       "position": {
         "x": 180,
@@ -244,18 +248,27 @@
   ],
   "edgeAnnotations": [
     {
+      "id": "Clab-Link3",
+      "source": "transit",
+      "target": "receiver",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 50
+    },
+    {
       "id": "Clab-Link0",
-      "source": "rendezvous-point",
-      "target": "mapping-agent",
+      "source": "ma",
+      "target": "source",
       "sourceEndpoint": "Ethernet0/1",
       "targetEndpoint": "Ethernet0/1",
       "endpointLabelOffsetEnabled": true,
-      "endpointLabelOffset": 56
+      "endpointLabelOffset": 50
     },
     {
       "id": "Clab-Link1",
-      "source": "rendezvous-point",
-      "target": "transit-1",
+      "source": "ma",
+      "target": "rp",
       "sourceEndpoint": "Ethernet0/2",
       "targetEndpoint": "Ethernet0/1",
       "endpointLabelOffsetEnabled": true,
@@ -263,19 +276,10 @@
     },
     {
       "id": "Clab-Link2",
-      "source": "transit-2",
-      "target": "transit-1",
+      "source": "transit",
+      "target": "rp",
       "sourceEndpoint": "Ethernet0/1",
       "targetEndpoint": "Ethernet0/2",
-      "endpointLabelOffsetEnabled": true,
-      "endpointLabelOffset": 60
-    },
-    {
-      "id": "Clab-Link3",
-      "source": "transit-2",
-      "target": "receiver",
-      "sourceEndpoint": "Ethernet0/2",
-      "targetEndpoint": "Ethernet0/1",
       "endpointLabelOffsetEnabled": true,
       "endpointLabelOffset": 50
     }
