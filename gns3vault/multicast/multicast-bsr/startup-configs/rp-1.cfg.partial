@@ -1,0 +1,48 @@
+!
+hostname rp-1
+!
+!
+!
+ip multicast-routing
+!
+!
+!
+interface Loopback0
+ no shutdown
+ ip address 1.1.1.1 255.255.255.255
+ ip pim sparse-mode
+!
+interface Ethernet0/1
+ no shutdown
+ ip address 192.168.10.1 255.255.255.0
+ ip pim sparse-mode
+!
+interface Ethernet0/2
+ no shutdown
+ ip address 192.168.12.1 255.255.255.0
+ ip pim sparse-mode
+!
+!
+!
+router ospf 1
+ router-id 1.1.1.1
+ network 0.0.0.0 255.255.255.255 area 0
+!
+!
+!
+ip access-list standard GROUPS
+ permit 239.1.1.0 0.0.0.3
+!
+!
+!
+ip pim rp-candidate Loopback0 group-list GROUPS priority 0
+!
+!
+!
+line vty 0 4
+ logging synchronous
+ exec prompt timestamp
+ exec-timeout 0 0
+ privilege level 15
+!
+end

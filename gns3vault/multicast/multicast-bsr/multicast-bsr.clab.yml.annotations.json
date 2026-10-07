@@ -1,0 +1,129 @@
+{
+  "freeTextAnnotations": [],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "r1",
+      "position": {
+        "x": 760,
+        "y": 460
+      },
+      "icon": "pe",
+      "interfacePattern": "Ethernet0/{n}",
+      "iconCornerRadius": 0
+    },
+    {
+      "id": "r2",
+      "position": {
+        "x": 760,
+        "y": 280
+      },
+      "icon": "pe",
+      "interfacePattern": "Ethernet0/{n}",
+      "iconCornerRadius": 0
+    },
+    {
+      "id": "r3",
+      "position": {
+        "x": 960,
+        "y": 280
+      },
+      "icon": "pe",
+      "interfacePattern": "Ethernet0/{n}",
+      "iconCornerRadius": 0
+    },
+    {
+      "id": "r4",
+      "position": {
+        "x": 960,
+        "y": 460
+      },
+      "icon": "pe",
+      "interfacePattern": "Ethernet0/{n}",
+      "iconCornerRadius": 0
+    },
+    {
+      "id": "source",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 140,
+        "y": 220
+      }
+    },
+    {
+      "id": "rp-1",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 380,
+        "y": 220
+      }
+    },
+    {
+      "id": "bsr",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 260,
+        "y": 380
+      }
+    },
+    {
+      "id": "rp-2",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 380,
+        "y": 540
+      }
+    },
+    {
+      "id": "receiver",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 140,
+        "y": 540
+      }
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link0",
+      "source": "source",
+      "target": "rp-1",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    },
+    {
+      "id": "Clab-Link1",
+      "source": "rp-1",
+      "target": "bsr",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 50
+    },
+    {
+      "id": "Clab-Link2",
+      "source": "bsr",
+      "target": "rp-2",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 50
+    },
+    {
+      "id": "Clab-Link3",
+      "source": "rp-2",
+      "target": "receiver",
+      "sourceEndpoint": "Ethernet0/2",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

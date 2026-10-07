@@ -1,0 +1,31 @@
+---
+name: multicast-bsr
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:17.16.01a
+  nodes:
+    source:
+      kind: cisco_iol
+      startup-config: ./startup-configs/source.cfg.partial
+    rp-1:
+      kind: cisco_iol
+      startup-config: ./startup-configs/rp-1.cfg.partial
+    bsr:
+      kind: cisco_iol
+      startup-config: ./startup-configs/bsr.cfg.partial
+    rp-2:
+      kind: cisco_iol
+      startup-config: ./startup-configs/rp-2.cfg.partial
+    receiver:
+      kind: cisco_iol
+      startup-config: ./startup-configs/receiver.cfg.partial
+  links:
+    - endpoints: ["source:Ethernet0/1", "rp-1:Ethernet0/1"]
+    - endpoints: ["rp-1:Ethernet0/2", "bsr:Ethernet0/1"]
+    - endpoints: ["bsr:Ethernet0/2", "rp-2:Ethernet0/1"]
+    - endpoints: ["rp-2:Ethernet0/2", "receiver:Ethernet0/1"]
+
+...
