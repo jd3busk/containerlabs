@@ -7,19 +7,21 @@ topology:
     cisco_iol:
       image: vrnetlab/cisco_iol:latest
   nodes:
-    production:
+    rp:
       kind: cisco_iol
-      startup-config: ./startup-configs/production.cfg.partial
-    border:
+      startup-config: ./startup-configs/rp.cfg.partial
+    boundary:
       kind: cisco_iol
-      startup-config: ./startup-configs/border.cfg.partial
-    partner:
+      startup-config: ./startup-configs/boundary.cfg.partial
+    receiver-outside:
       kind: cisco_iol
-      startup-config: ./startup-configs/partner.cfg.partial
-    coaches:
+      startup-config: ./startup-configs/receiver-outside.cfg.partial
+    receiver-inside:
       kind: cisco_iol
-      startup-config: ./startup-configs/coaches.cfg.partial
+      startup-config: ./startup-configs/receiver-inside.cfg.partial
   links:
-    - endpoints: ['production:Ethernet0/1', 'border:Ethernet0/1']
-    - endpoints: ['border:Ethernet0/2', 'partner:Ethernet0/1']
-    - endpoints: ['border:Ethernet0/3', 'coaches:Ethernet0/1']
+    - endpoints: ['rp:Ethernet0/1', 'boundary:Ethernet0/1']
+    - endpoints: ['boundary:Ethernet0/2', 'receiver-outside:Ethernet0/1']
+    - endpoints: ['boundary:Ethernet0/3', 'receiver-inside:Ethernet0/1']
+
+...

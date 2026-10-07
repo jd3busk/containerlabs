@@ -1,63 +1,109 @@
 # Multicast Boundary Filtering: Auto-RP Mappings
 
-## Scenario
-
-The Tennessee Titans share live video and replays with a broadcast partner. The partner should learn the RP mappings for those feeds, while the private coaching feed's mapping stays inside the team network.
-
 ## Goal
 
-- IP addresses, OSPF, PIM sparse mode, and receiver joins for all three groups are preconfigured.
-- On production, make `Loopback0` (`1.1.1.1`) the Auto-RP and mapping agent for all three groups.
-- On border, enable the Auto-RP listener. Apply a **standard ACL** multicast boundary with `filter-autorp` on `Ethernet0/2` toward partner. Permit Auto-RP control groups and the mappings for `239.1.1.1` and `239.2.2.2`; exclude `239.3.3.3`.
-- Verify partner learns only the first two mappings after they refresh. Coaches should retain all three.
+- IP addresses, OSPF, PIM sparse mode, and receiver joins for both groups are preconfigured.
+- Make rp's `Loopback0` (`1.1.1.1`) the candidate RP and mapping agent for `239.1.1.1` and `239.2.2.2`.
+- On boundary, enable the Auto-RP listener.
+  - Apply a **standard ACL** multicast boundary with `filter-autorp` on `Ethernet0/2` toward receiver-outside.
+  - Permit Auto-RP control groups and `239.1.1.1`; deny `239.2.2.2`.
+- Verify receiver-outside learns only the `239.1.1.1` mapping. receiver-inside should retain both mappings.
 
 ## Topology
 
-<img src="./topology.svg" style="max-width: 700px; width: 100%; height: auto;">
+<img src="./topology.svg" style="max-height: 500px; height: 100%; width: auto;">
 
-| Group | Feed |
-| --- | --- |
-| `239.1.1.1` | Live video |
-| `239.2.2.2` | Replays |
-| `239.3.3.3` | Private coaching video |
+## Solutions
+
+**Make rp's `Loopback0` (`1.1.1.1`) the candidate RP and mapping agent for `239.1.1.1` and `239.2.2.2`.**
+
+```text
+# rp
+configure terminal
+
+ip access-list standard GROUPS
+ permit 239.1.1.1
+ permit 239.2.2.2
+exit
+
+ip pim autorp listener
+ip pim send-rp-announce Loopback0 scope 10 group-list GROUPS
+ip pim send-rp-discovery Loopback0 scope 10
+
+end
+```
+
+**On boundary, enable the Auto-RP listener.**
+
+```text
+# boundary
+configure terminal
+
+ip pim autorp listener
+
+end
+```
+
+**Permit Auto-RP control groups and `239.1.1.1`; deny `239.2.2.2`.**
+
+```text
+# boundary
+configure terminal
+
+ip access-list standard BOUNDARY
+ permit 224.0.1.39
+ permit 224.0.1.40
+ permit 239.1.1.1
+ deny 239.2.2.2
+
+end
+```
+
+**Apply a standard ACL multicast boundary with `filter-autorp` on `Ethernet0/2` toward receiver-outside.**
+
+```text
+# boundary
+configure terminal
+
+interface Ethernet0/2
+ ip multicast boundary BOUNDARY filter-autorp
+
+end
+```
 
 ## Verification
 
-Configure Auto-RP on production first. Before adding the boundary, both receivers should learn all three mappings and answer pings to all three groups.
-
-**Partner and coaches**
+Verify: <mark>***Permit 224.0.1.39, 224.0.1.40 and 239.1.1.1; deny 239.2.2.2.***</mark>
 
 ```text
-show ip pim rp mapping
+# boundary
+show access-lists BOUNDARY
 ```
 
-**Production**
+Verify: <mark>***`239.1.1.1` receives replies from both receivers: 192.168.24.4 and 192.168.23.3.***</mark>
 
 ```text
+# rp
 ping 239.1.1.1 source Loopback0 repeat 5
 ```
 
+Verify: <mark>***`239.2.2.2` receives replies only from receiver-inside: 192.168.24.4.***</mark>
+
 ```text
+# rp
 ping 239.2.2.2 source Loopback0 repeat 5
 ```
 
-```text
-ping 239.3.3.3 source Loopback0 repeat 5
-```
-
-Apply the boundary on border. After the Auto-RP mappings refresh, partner should show only the first two; coaches should still show all three.
-
-**Border**
+Verify: <mark>***receiver-outside maps only 239.1.1.1 to RP 1.1.1.1.***</mark>
 
 ```text
-show running-config interface Ethernet0/2
-show access-lists PARTNER_RP_GROUPS
-```
-
-**Partner and coaches**
-
-```text
+# receiver-outside
 show ip pim rp mapping
 ```
 
-Repeat the three pings from production to compare delivery. A multicast boundary also filters data, so ping results alone do not prove which RP mappings were received.
+Verify: <mark>***receiver-inside maps both groups to RP 1.1.1.1.***</mark>
+
+```text
+# receiver-inside
+show ip pim rp mapping
+```

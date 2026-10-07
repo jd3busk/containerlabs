@@ -1,32 +1,28 @@
 !
-hostname border
+hostname rp
 !
 !
 !
-ip multicast-routing 
+ip multicast-routing
 !
 !
+!
+interface Loopback0
+ no shutdown
+ ip address 1.1.1.1 255.255.255.255
+ ip pim sparse-mode
 !
 interface Ethernet0/1
  no shutdown
- ip address 192.168.12.2 255.255.255.0
- ip pim sparse-mode
-!
-interface Ethernet0/2
- no shutdown
- ip address 192.168.23.2 255.255.255.0
- ip pim sparse-mode
-!
-!
-interface Ethernet0/3
- no shutdown
- ip address 192.168.24.2 255.255.255.0
+ ip address 192.168.12.1 255.255.255.0
  ip pim sparse-mode
 !
 !
 !
 router ospf 1
  network 0.0.0.0 255.255.255.255 area 0
+!
+!
 !
 !
 !
