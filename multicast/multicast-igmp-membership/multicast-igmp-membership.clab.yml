@@ -1,0 +1,31 @@
+---
+name: multicast-igmp-membership
+prefix: ""
+
+topology:
+  kinds:
+    cisco_iol:
+      image: vrnetlab/cisco_iol:17.16.01a
+  nodes:
+    source-1:
+      kind: cisco_iol
+      startup-config: ./startup-configs/source-1.cfg.partial
+    source-2:
+      kind: cisco_iol
+      startup-config: ./startup-configs/source-2.cfg.partial
+    endpoint-1:
+      kind: cisco_iol
+      startup-config: ./startup-configs/endpoint-1.cfg.partial
+    endpoint-2:
+      kind: cisco_iol
+      startup-config: ./startup-configs/endpoint-2.cfg.partial
+    switch:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol_l2:latest
+      startup-config: ./startup-configs/switch.cfg.partial
+  links:
+    - endpoints: ['source-1:Ethernet0/1', 'switch:Ethernet0/1']
+    - endpoints: ['source-2:Ethernet0/1', 'switch:Ethernet0/2']
+    - endpoints: ['endpoint-1:Ethernet0/1', 'switch:Ethernet0/3']
+    - endpoints: ['endpoint-2:Ethernet0/1', 'switch:Ethernet1/0']

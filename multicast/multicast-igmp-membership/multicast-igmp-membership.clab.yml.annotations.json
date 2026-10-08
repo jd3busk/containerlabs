@@ -1,0 +1,89 @@
+{
+  "freeTextAnnotations": [],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "source-1",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 200,
+        "y": 220
+      }
+    },
+    {
+      "id": "source-2",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 520,
+        "y": 220
+      }
+    },
+    {
+      "id": "endpoint-1",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 200,
+        "y": 480
+      }
+    },
+    {
+      "id": "endpoint-2",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 520,
+        "y": 480
+      }
+    },
+    {
+      "id": "switch",
+      "interfacePattern": "e0/{n}",
+      "position": {
+        "x": 360,
+        "y": 360
+      }
+    }
+  ],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link0",
+      "source": "source-1",
+      "target": "switch",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    },
+    {
+      "id": "Clab-Link1",
+      "source": "source-2",
+      "target": "switch",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    },
+    {
+      "id": "Clab-Link2",
+      "source": "endpoint-1",
+      "target": "switch",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet0/3",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    },
+    {
+      "id": "Clab-Link3",
+      "source": "endpoint-2",
+      "target": "switch",
+      "sourceEndpoint": "Ethernet0/1",
+      "targetEndpoint": "Ethernet1/0",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 60
+    }
+  ],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

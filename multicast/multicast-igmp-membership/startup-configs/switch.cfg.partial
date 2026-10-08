@@ -1,0 +1,47 @@
+!
+hostname switch
+!
+no ip igmp snooping
+!
+vlan 10
+ name IGMP_LAN
+!
+interface Ethernet0/1
+ description TO_source-1
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ no shutdown
+!
+interface Ethernet0/2
+ description TO_source-2
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ no shutdown
+!
+interface Ethernet0/3
+ description TO_endpoint-1
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ no shutdown
+!
+interface Ethernet1/0
+ description TO_endpoint-2
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ no shutdown
+!
+!
+line console 0
+ exec-timeout 0 0
+ logging synchronous
+!
+line vty 0 4
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+!
+end

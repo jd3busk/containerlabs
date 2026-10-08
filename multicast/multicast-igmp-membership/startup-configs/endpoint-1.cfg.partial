@@ -1,0 +1,21 @@
+!
+hostname endpoint-1
+!
+no ip multicast-routing
+!
+interface Ethernet0/1
+ description IGMP_LAN
+ ip address 192.168.10.11 255.255.255.0
+ ip igmp version 2
+ no shutdown
+!
+line console 0
+ exec-timeout 0 0
+ logging synchronous
+!
+line vty 0 4
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+!
+end
