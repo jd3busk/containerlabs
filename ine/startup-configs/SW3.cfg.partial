@@ -1,4 +1,14 @@
 !
+hostname SW3
+!
+!
+!
+no ip domain lookup
+ip routing
+ipv6 unicast-routing
+!
+!
+!
 line vty 0 4
  exec-timeout 0 0
  privilege level 15

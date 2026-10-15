@@ -1,40 +1,42 @@
 !
-!
-no service timestamps debug uptime
-no service timestamps log uptime
-!
 hostname R5
+!
+!
 !
 no ip domain lookup
 ip routing
 ipv6 unicast-routing
 !
-cdp run
+!
 !
 interface Loopback0
+ no shutdown
  ipv6 address 2001:150:5:5::5/128
  ip address 150.1.5.5 255.255.255.255
 !
 interface Ethernet0/1
- cdp enable
  no shutdown
 !
 interface Ethernet0/1.5
+ no shutdown
  encapsulation dot1q 5
  ip address 155.1.5.5 255.255.255.0
  ipv6 address 2001:155:1:5::5/64
 !
 interface Ethernet0/1.45
+ no shutdown
  encapsulation dot1q 45
  ip address 155.1.45.5 255.255.255.0
  ipv6 address 2001:155:1:45::5/64
 !
 interface Ethernet0/1.58
+ no shutdown
  encapsulation dot1q 58
  ip address 155.1.58.5 255.255.255.0
  ipv6 address 2001:155:1:58::5/64
 !
 interface Ethernet0/1.100
+ no shutdown
  encapsulation dot1q 100
  ip address 169.254.100.5 255.255.255.0
  ipv6 address 2001:169:254:100::5/64
@@ -53,6 +55,7 @@ crypto ipsec profile DMVPN_PROFILE
  set transform-set ESP_AES_SHA
 !
 interface Tunnel0
+ no shutdown
  ip address 155.1.0.5 255.255.255.0
  ip mtu 1400
  ip nhrp authentication NHRPPASS
@@ -65,6 +68,8 @@ interface Tunnel0
  tunnel key 150
  tunnel protection ipsec profile DMVPN_PROFILE
  no shutdown
+!
+!
 !
 line vty 0 4
  exec-timeout 0 0
