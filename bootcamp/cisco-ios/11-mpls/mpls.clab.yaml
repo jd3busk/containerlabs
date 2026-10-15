@@ -1,0 +1,75 @@
+---
+name: mpls
+
+topology:
+  nodes:
+    R1-YELLOW:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R2-BLUE:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R3-BLUE:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R4-BLUE:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R5-YELLOW:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R6-SERVER:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R7-EDGE:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R8-GREEN:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R9-GREEN:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R10-P:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    PE11:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    PE12:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+
+  links:
+    # R1-YELLOW dual-homed to PE11
+    - endpoints: [ "R1-YELLOW:Ethernet0/2", "PE11:Ethernet1/2" ]
+    - endpoints: [ "R1-YELLOW:Ethernet0/1", "PE11:Ethernet0/3" ]
+
+    # R2-BLUE to PE11
+    - endpoints: [ "R2-BLUE:Ethernet0/1", "PE11:Ethernet1/1" ]
+
+    # R6-SERVER to PE11
+    - endpoints: [ "R6-SERVER:Ethernet0/1", "PE11:Ethernet0/2" ]
+
+    # R8-GREEN to PE11
+    - endpoints: [ "R8-GREEN:Ethernet0/1", "PE11:Ethernet1/0" ]
+
+    # MPLS core
+    - endpoints: [ "PE11:Ethernet0/1", "R10-P:Ethernet0/1" ]
+    - endpoints: [ "R10-P:Ethernet0/2", "PE12:Ethernet0/1" ]
+
+    # Blue CE side
+    - endpoints: [ "R3-BLUE:Ethernet0/1", "R4-BLUE:Ethernet0/1" ]
+    - endpoints: [ "R3-BLUE:Ethernet0/2", "PE12:Ethernet0/3" ]
+    - endpoints: [ "R4-BLUE:Ethernet0/2", "PE12:Ethernet1/0" ]
+
+    # R5-YELLOW dual-homed to PE12
+    - endpoints: [ "R5-YELLOW:Ethernet0/1", "PE12:Ethernet1/1" ]
+    - endpoints: [ "R5-YELLOW:Ethernet0/2", "PE12:Ethernet1/3" ]
+
+    # R7-EDGE to PE12
+    - endpoints: [ "R7-EDGE:Ethernet0/1", "PE12:Ethernet0/2" ]
+
+    # Green CE side
+    - endpoints: [ "PE12:Ethernet1/2", "R9-GREEN:Ethernet0/1" ]
+    - endpoints: [ "R8-GREEN:Ethernet0/2", "R9-GREEN:Ethernet0/2" ]

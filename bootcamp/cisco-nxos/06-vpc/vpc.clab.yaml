@@ -1,0 +1,37 @@
+---
+name: vpc
+
+topology:
+  nodes:
+    NX1:
+      kind: cisco_n9kv
+      image: vrnetlab/cisco_n9kv:9300v64-10.5.3.F
+      startup-config: configs/NX1.partial.cfg
+      env:
+        QEMU_MEMORY: "10240"
+        QEMU_SMP: "4"
+    NX2:
+      kind: cisco_n9kv
+      image: vrnetlab/cisco_n9kv:9300v64-10.5.3.F
+      startup-config: configs/NX2.partial.cfg
+      env:
+        QEMU_MEMORY: "10240"
+        QEMU_SMP: "4"
+    SWITCH:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.16.01a
+      startup-config: configs/SWITCH.partial.cfg
+    SERVER:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.16.01a
+      startup-config: configs/SERVER.partial.cfg
+  links:
+    - endpoints: [ "NX1:Ethernet1/1", "NX2:Ethernet1/1" ]
+    - endpoints: [ "NX1:Ethernet1/2", "NX2:Ethernet1/2" ]
+    - endpoints: [ "NX1:Ethernet1/3", "SWITCH:Ethernet0/1" ]
+    - endpoints: [ "NX2:Ethernet1/3", "SWITCH:Ethernet0/2" ]
+    - endpoints: [ "NX1:Ethernet1/4", "SERVER:Ethernet0/1" ]
+    - endpoints: [ "NX2:Ethernet1/4", "SERVER:Ethernet0/2" ]
+    - endpoints: [ "NX1:Ethernet1/5", "NX2:Ethernet1/5" ]

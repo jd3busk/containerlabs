@@ -1,0 +1,21 @@
+---
+name: mstp
+
+topology:
+  nodes:
+    DSW1:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.16.01a
+    DSW2:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.16.01a
+    DSW3:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.16.01a
+  links:
+    - endpoints: [ "DSW1:Ethernet0/1", "DSW2:Ethernet0/1" ]
+    - endpoints: [ "DSW2:Ethernet0/2", "DSW3:Ethernet0/1" ]
+    - endpoints: [ "DSW1:Ethernet0/2", "DSW3:Ethernet0/2" ]

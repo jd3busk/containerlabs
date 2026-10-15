@@ -1,0 +1,20 @@
+---
+name: vtp
+
+topology:
+  nodes:
+    CSW:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.16.01a
+    DSW:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.16.01a
+    ASW:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.16.01a
+  links:
+    - endpoints: [ "CSW:Ethernet0/1", "DSW:Ethernet0/1" ]
+    - endpoints: [ "DSW:Ethernet0/2", "ASW:Ethernet0/1" ]

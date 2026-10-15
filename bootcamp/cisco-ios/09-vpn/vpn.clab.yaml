@@ -1,0 +1,28 @@
+---
+name: vpn
+
+topology:
+  nodes:
+    R1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R2:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R3:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    R4:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.16.01a
+    VLAN:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.16.01a
+
+  links:
+    - endpoints: [ "R1:Ethernet0/1", "VLAN:Ethernet0/1" ]
+    - endpoints: [ "R2:Ethernet0/1", "VLAN:Ethernet0/2" ]
+    - endpoints: [ "R3:Ethernet0/1", "VLAN:Ethernet0/3" ]
+    - endpoints: [ "R2:Ethernet0/2", "R4:Ethernet0/1" ]
+    - endpoints: [ "R3:Ethernet0/2", "R4:Ethernet0/2" ]

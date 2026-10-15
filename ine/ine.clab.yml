@@ -1,0 +1,144 @@
+---
+name: ine
+prefix: ''
+topology:
+  nodes:
+    R1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:latest
+      startup-config: startup-configs/R1.cfg.partial
+    R2:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:latest
+      startup-config: startup-configs/R2.cfg.partial
+    R3:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:latest
+      startup-config: startup-configs/R3.cfg.partial
+    R4:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:latest
+      startup-config: startup-configs/R4.cfg.partial
+    R5:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:latest
+      startup-config: startup-configs/R5.cfg.partial
+    R6:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:latest
+      startup-config: startup-configs/R6.cfg.partial
+    R7:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:latest
+      startup-config: startup-configs/R7.cfg.partial
+    R8:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:latest
+      startup-config: startup-configs/R8.cfg.partial
+    R9:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:latest
+      startup-config: startup-configs/R9.cfg.partial
+    R10:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:latest
+      startup-config: startup-configs/R10.cfg.partial
+    SW1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol_l2:latest
+      type: L2
+      startup-config: startup-configs/SW1.cfg.partial
+    SW2:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol_l2:latest
+      type: L2
+      startup-config: startup-configs/SW2.cfg.partial
+    SW3:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol_l2:latest
+      type: L2
+      startup-config: startup-configs/SW3.cfg.partial
+    SW4:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol_l2:latest
+      type: L2
+      startup-config: startup-configs/SW4.cfg.partial
+    bridge0:
+      kind: linux
+      image: alpine:latest
+      exec:
+      - sh -c 'echo 0 > /sys/class/net/bridge0/bridge/vlan_filtering'
+      - sh -c 'echo 0 > /sys/class/net/bridge0/bridge/multicast_snooping'
+    bridge0|bridge0:
+      kind: bridge
+      network-mode: container:bridge0
+  links:
+  - endpoints:
+    - R1:Ethernet0/1
+    - bridge0|bridge0:eth1
+  - endpoints:
+    - R2:Ethernet0/1
+    - bridge0|bridge0:eth2
+  - endpoints:
+    - R3:Ethernet0/1
+    - bridge0|bridge0:eth3
+  - endpoints:
+    - R4:Ethernet0/1
+    - bridge0|bridge0:eth4
+  - endpoints:
+    - R5:Ethernet0/1
+    - bridge0|bridge0:eth5
+  - endpoints:
+    - R6:Ethernet0/1
+    - bridge0|bridge0:eth6
+  - endpoints:
+    - R7:Ethernet0/1
+    - bridge0|bridge0:eth7
+  - endpoints:
+    - R8:Ethernet0/1
+    - bridge0|bridge0:eth8
+  - endpoints:
+    - R9:Ethernet0/1
+    - bridge0|bridge0:eth9
+  - endpoints:
+    - R10:Ethernet0/1
+    - bridge0|bridge0:eth10
+  - endpoints:
+    - SW1:Ethernet0/1
+    - SW3:Ethernet0/1
+  - endpoints:
+    - SW1:Ethernet0/2
+    - SW3:Ethernet0/2
+  - endpoints:
+    - SW2:Ethernet0/1
+    - SW4:Ethernet0/1
+  - endpoints:
+    - SW2:Ethernet0/2
+    - SW4:Ethernet0/2
+  - endpoints:
+    - SW1:Ethernet0/3
+    - SW4:Ethernet0/3
+  - endpoints:
+    - SW1:Ethernet1/0
+    - SW4:Ethernet1/0
+  - endpoints:
+    - SW3:Ethernet0/3
+    - SW2:Ethernet0/3
+  - endpoints:
+    - SW3:Ethernet1/0
+    - SW2:Ethernet1/0
+  - endpoints:
+    - SW1:Ethernet1/1
+    - SW2:Ethernet1/1
+  - endpoints:
+    - SW1:Ethernet1/2
+    - SW2:Ethernet1/2
+  - endpoints:
+    - SW3:Ethernet1/1
+    - SW4:Ethernet1/1
+  - endpoints:
+    - SW3:Ethernet1/2
+    - SW4:Ethernet1/2
+  - endpoints:
+    - SW1:Ethernet1/3
+    - bridge0|bridge0:eth11

@@ -1,0 +1,10 @@
+!
+line vty 0 4
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ login local
+ exec prompt timestamp
+ transport input ssh
+!
+end
